@@ -1,0 +1,35 @@
+import PropTypes from 'prop-types';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+
+const MovieColumn = (props) => {
+  const { movie } = props;
+
+  return (
+    <Col className="col-6 col-sm-4 col-md-3">
+      <Card className="movie-card bg-dark h-100 rounded-0 border-0">
+        <Card.Img className="rounded-0" src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} loading="lazy" />
+
+        <Card.Body className="text-white">
+          <Card.Title className="fs-5 fw-bold">{movie.title}</Card.Title>
+          <Card.Text>
+            <span className="text-muted">Rating:&nbsp;&nbsp;</span>
+            <b>
+              {movie.vote_average}
+              /10
+            </b>
+          </Card.Text>
+          <Card.Link className="btn btn-success opacity-100 border-white border-2 fw-bold">More Info</Card.Link>
+
+          <Card.Img className="card-img mt-2" src={`https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`} />
+        </Card.Body>
+      </Card>
+    </Col>
+  );
+};
+
+MovieColumn.propTypes = {
+  movie: PropTypes.instanceOf(Object).isRequired,
+};
+
+export default MovieColumn;

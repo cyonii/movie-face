@@ -1,11 +1,21 @@
-$dark: #000000;
+$dark: #000;
 
 @import "~bootstrap/scss/bootstrap";
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $dark;
@@ -18,5 +28,33 @@ code {
 @media (min-width: 1200px) {
   .container {
     width: 992px;
+  }
+}
+
+// Movie card
+.movie-card {
+  transition: 0.3s;
+
+  .card-body {
+    display: none;
+    transition: 0.3s;
+    transform: scale(0);
+  }
+
+  &:hover {
+    .card-body {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(1);
+      background-color: $dark;
+      opacity: 0.9;
+    }
   }
 }
