@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -20,7 +21,7 @@ const MovieColumn = (props) => {
               &nbsp;/ 10
             </b>
           </Card.Text>
-          <Card.Link className="btn btn-success border-success border-2 fw-bold">Movie Info</Card.Link>
+          <Link to={`/movie/${movie.id}`} className="btn btn-success border-success border-2 fw-bold">Movie Info</Link>
         </Card.Body>
       </Card>
     </Col>
