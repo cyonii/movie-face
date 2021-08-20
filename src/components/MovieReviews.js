@@ -13,7 +13,7 @@ const MovieReviews = (props) => {
 
   return (
     <>
-      <h5 className="sticky-top bg-dark py-2 border-bottom border-secondary">Reviews</h5>
+      <h5 className="sticky-top bg-dark py-2 text-decoration-underline border-secondary">Reviews</h5>
       <ListGroup variamt="flush">
         {
           reviews.length > 0
