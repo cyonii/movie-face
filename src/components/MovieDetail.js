@@ -1,21 +1,17 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import MovieReviews from './MovieReviews';
+import { fetchMovie } from '../api';
 
 const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
-  const API_KEY = 'fca3a09ec5fa268a31aa58f3449d68be';
-  const LANG = 'en-US';
 
-  useEffect(() => {
-    // Fetch movie data
-    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=${LANG}`)
-      .then((response) => setMovie({ ...response.data }))
-      .catch((error) => error.response.data);
+  useEffect(async () => {
+    setMovie(await fetchMovie(id));
   }, []);
 
   // Return loading indicator if movie data is not fetched
@@ -29,13 +25,13 @@ const MovieDetail = () => {
     );
   }
 
-  const makeBadge = (text, key = null) => <div className="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2" key={key}>{text}</div>;
+  const makeBadge = (text) => <div className="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2" key={text}>{text}</div>;
   const makeAttrColumn = (colClass, text, value) => (
     <Col className={colClass}>
-      <p>
+      <div className="mb-3">
         <small className="d-block text-muted fw-bold">{`${text}:`}</small>
         {value instanceof Array ? value : <b>{value}</b>}
-      </p>
+      </div>
     </Col>
   );
 
@@ -66,8 +62,11 @@ const MovieDetail = () => {
       </Row>
 
       <Row className="justify-content-center">
+        <Col>
+          <MovieReviews movieID={movie.id} />
+        </Col>
         <Col className="text-center">
-          <img className="img-fluid" src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} />
+          <img className="img-fluid" style={{ width: '300px' }} src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} />
         </Col>
       </Row>
     </Container>
