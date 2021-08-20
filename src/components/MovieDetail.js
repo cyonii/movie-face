@@ -41,7 +41,9 @@ const MovieDetail = () => {
         </Col>
         <Col className="col-12 col-md-6">
           <h1 className="text-secondarys lh-1 mb-0"><b>{movie.title}</b></h1>
-          <a href={movie.homepage} className="text-secondary fw-light" target="_blank" rel="noreferrer"><small>{movie.homepage}</small></a>
+          <a href={movie.homepage} className="text-secondary fw-light" target="_blank" rel="noreferrer">
+            <small>{movie.homepage}</small>
+          </a>
 
           <p className="lh-sm text-info mt-4">{movie.overview}</p>
           <Row>
