@@ -4,6 +4,7 @@ import { connect, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addMovies } from '../redux/actions';
 import MovieColumn from '../components/MovieColumn';
+import Loading from '../components/Loading';
 import { fetchMoviesByType } from '../api/movies';
 
 const MoviesRow = ((props) => {
@@ -11,8 +12,14 @@ const MoviesRow = ((props) => {
   const dispatch = useDispatch();
 
   useEffect(async () => {
+    dispatch(addMovies([]));
     dispatch(addMovies(await fetchMoviesByType(filter)));
   }, [filter]);
+
+  // return Loading component if no movies
+  if (movies.length === 0) {
+    return <Loading />;
+  }
 
   return (
     <Row className="g-0">

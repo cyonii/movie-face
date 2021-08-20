@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MovieReviews from './MovieReviews';
+import Suspense from './Loading';
 import { fetchMovie } from '../api/movies';
 
 const MovieDetail = () => {
@@ -14,13 +15,7 @@ const MovieDetail = () => {
 
   // Return loading indicator if movie data is not fetched
   if (movie.id === undefined) {
-    return (
-      <div className="d-flex justify-content-center align-items-center">
-        <div className="spinner-grow bg-light mt-5" role="status">
-          <span className="visually-hidden sr-only">Loading...</span>
-        </div>
-      </div>
-    );
+    return (<Suspense />);
   }
 
   const makeBadge = (text) => <div className="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2" key={text}>{text}</div>;
