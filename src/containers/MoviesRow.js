@@ -4,13 +4,13 @@ import { connect, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addMovies } from '../redux/actions';
 import MovieColumn from '../components/MovieColumn';
-import { fetchMovies } from '../api';
+import { fetchPopularMovies } from '../api/movies';
 
 const MoviesRow = ((props) => {
   const { movies } = props;
   const dispatch = useDispatch();
 
-  useEffect(async () => dispatch(addMovies(await fetchMovies())), []);
+  useEffect(async () => dispatch(addMovies(await fetchPopularMovies())), []);
 
   const columns = movies.map((movie) => <MovieColumn movie={movie} key={movie.id} />);
 

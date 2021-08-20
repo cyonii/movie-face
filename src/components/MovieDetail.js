@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MovieReviews from './MovieReviews';
-import { fetchMovie } from '../api';
+import { fetchMovie } from '../api/movies';
 
 const MovieDetail = () => {
   const { id } = useParams();
