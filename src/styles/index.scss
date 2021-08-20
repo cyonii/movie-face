@@ -15,6 +15,11 @@ body {
   flex-direction: column;
 }
 
+button,
+select {
+  cursor: pointer;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -22,6 +27,24 @@ code {
 @media (min-width: 1200px) {
   .container {
     width: 992px;
+  }
+}
+
+// Utilities
+.overflow-y-auto {
+  overflow-y: auto !important;
+}
+
+// Form
+.form-control {
+  outline: none;
+  box-shadow: none;
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+    box-shadow: none;
   }
 }
 
@@ -97,5 +120,20 @@ code {
   100% {
     // opacity: 1;
     transform: rotate(360deg);
+  }
+}
+
+// Review row
+#review-row {
+  @include media-breakpoint-up(md) {
+    height: 414px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 564px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 460px;
   }
 }

@@ -7,7 +7,7 @@ const MovieColumn = (props) => {
   const { movie } = props;
 
   return (
-    <Col className="col-6 col-sm-4 col-md-3">
+    <Col xs={6} sm={4} md={3}>
       <Card className="movie-card bg-dark h-100 rounded-0 border-0">
         <Card.Img className="rounded-0" src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} loading="lazy" />
 

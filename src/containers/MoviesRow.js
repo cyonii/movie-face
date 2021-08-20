@@ -12,9 +12,11 @@ const MoviesRow = ((props) => {
 
   useEffect(async () => dispatch(addMovies(await fetchPopularMovies())), []);
 
-  const columns = movies.map((movie) => <MovieColumn movie={movie} key={movie.id} />);
-
-  return <Row className="g-0">{columns}</Row>;
+  return (
+    <Row className="g-0">
+      {movies.map((movie) => <MovieColumn movie={movie} key={movie.id} />)}
+    </Row>
+  );
 });
 
 MoviesRow.propTypes = {

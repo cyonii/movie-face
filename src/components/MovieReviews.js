@@ -12,20 +12,13 @@ const MovieReviews = (props) => {
 
   return (
     <>
-      <h5>Reviews</h5>
+      <h5 className="sticky-top bg-dark py-2 border-bottom border-secondary">Reviews</h5>
       <ul className="list-group">
         {reviews.map((review) => (
           <li className="list-group-item px-0 bg-transparent text-white" key={review.id}>
             <h6 className="text-info mb-0 lh-1">{`${review.author}`}</h6>
             <small className="text-muted">{`Rating: ${review.author_details.rating}`}</small>
-            <p>
-              {review.content.slice(0, 200)}
-              {
-                review.content.length > 200
-                  ? <a href={review.url} className="text-info text-decoration-none" target="_blank" rel="noreferrer"> ...</a>
-                  : ''
-              }
-            </p>
+            <p className="lh-1 opacity-75">{review.content}</p>
           </li>
         ))}
       </ul>

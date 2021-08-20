@@ -10,9 +10,7 @@ const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
 
-  useEffect(async () => {
-    setMovie(await fetchMovie(id));
-  }, []);
+  useEffect(async () => setMovie(await fetchMovie(id)), []);
 
   // Return loading indicator if movie data is not fetched
   if (movie.id === undefined) {
@@ -36,7 +34,7 @@ const MovieDetail = () => {
   );
 
   return (
-    <Container className="mt-5 text-white">
+    <Container className="mt-5 text-white mb-5">
       <Row>
         <Col className="col-12 col-md-6">
           <img className="img-fluid" src={`https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`} alt={movie.title} />
@@ -63,12 +61,12 @@ const MovieDetail = () => {
 
       <hr className="mb-5" />
 
-      <Row className="justify-content-center">
-        <Col>
+      <Row className="justify-content-center overflow-hidden" id="review-row">
+        <Col className="overflow-hidden overflow-y-auto h-100 mt-3 mt-md-0 pb-3">
           <MovieReviews movieID={movie.id} />
         </Col>
-        <Col className="text-center">
-          <img className="img-fluid" style={{ width: '300px' }} src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} />
+        <Col md={5} xl={4} className="order-first order-md-last text-center">
+          <img className="img-fluid" id="poster" src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} />
         </Col>
       </Row>
     </Container>
