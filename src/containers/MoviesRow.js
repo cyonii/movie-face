@@ -4,13 +4,15 @@ import { connect, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addMovies } from '../redux/actions';
 import MovieColumn from '../components/MovieColumn';
-import { fetchPopularMovies } from '../api/movies';
+import { fetchMoviesByType } from '../api/movies';
 
 const MoviesRow = ((props) => {
-  const { movies } = props;
+  const { movies, filter } = props;
   const dispatch = useDispatch();
 
-  useEffect(async () => dispatch(addMovies(await fetchPopularMovies())), []);
+  useEffect(async () => {
+    dispatch(addMovies(await fetchMoviesByType(filter)));
+  }, [filter]);
 
   return (
     <Row className="g-0">
@@ -21,8 +23,9 @@ const MoviesRow = ((props) => {
 
 MoviesRow.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.instanceOf(Object)).isRequired,
+  filter: PropTypes.string.isRequired,
 };
 
-const mapState = (state) => ({ movies: state.movies });
+const mapState = (state) => ({ movies: state.movies, filter: state.filter });
 
 export default connect(mapState)(MoviesRow);
