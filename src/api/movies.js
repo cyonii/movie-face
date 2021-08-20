@@ -5,7 +5,7 @@ const BASE_URL = 'https://api.themoviedb.org/3/movie';
 
 const fetchMoviesByType = async (type) => {
   const data = await axios.get(`${BASE_URL}/${type}?api_key=${API_KEY}&page=1`)
-    .then((response) => response.data.results)
+    .then((response) => response.data)
     .catch((error) => error.data);
 
   return data;
@@ -21,8 +21,9 @@ const fetchMovie = async (id) => {
 
 const fetchReviews = async (movieID) => {
   const data = axios.get(`${BASE_URL}/${movieID}/reviews?api_key=${API_KEY}`)
-    .then((response) => response.data.results)
+    .then((response) => response.data)
     .catch((error) => error.data);
+
   return data;
 };
 

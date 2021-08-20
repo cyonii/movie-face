@@ -1,13 +1,17 @@
-import { ADD_MOVIES, SET_FILTER } from './types';
+import { ADD_MOVIES, REMOVE_MOVIES, UPDATE_META_DATA } from './types';
 
 const addMovies = (movies) => ({
   type: ADD_MOVIES,
   payload: movies,
 });
 
-const setFilter = (filter) => ({
-  type: SET_FILTER,
+const removeMovies = () => ({
+  type: REMOVE_MOVIES,
+});
+
+const updateMetaData = (filter) => ({
+  type: UPDATE_META_DATA,
   payload: filter,
 });
 
-export { addMovies, setFilter };
+export { addMovies, removeMovies, updateMetaData };
