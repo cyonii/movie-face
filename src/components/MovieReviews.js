@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import ListGroup from 'react-bootstrap/ListGroup';
 import { fetchReviews } from '../api/movies';
 
 const MovieReviews = (props) => {
@@ -13,16 +14,24 @@ const MovieReviews = (props) => {
   return (
     <>
       <h5 className="sticky-top bg-dark py-2 border-bottom border-secondary">Reviews</h5>
-      <ul className="list-group">
-        {reviews.map((review) => (
-          <li className="list-group-item px-0 bg-transparent text-white" key={review.id}>
-            <h6 className="text-info mb-0 lh-1">{`${review.author}`}</h6>
-            <small className="text-muted">{`Rating: ${review.author_details.rating}`}</small>
+      <ListGroup variamt="flush">
+        {
+          reviews.length > 0
+            ? reviews.map((review) => (
+              <ListGroup.Item className="px-0 bg-transparent text-white" key={review.id}>
+                <h6 className="text-info mb-0 lh-1">{`${review.author}`}</h6>
+                <small className="text-muted">{`Rating: ${review.author_details.rating}`}</small>
 
-            {review.content.split('\n').map((line) => (<p className="mb-2 opacity-75" key={Math.random()}>{line}</p>))}
-          </li>
-        ))}
-      </ul>
+                {review.content.split('\n').map((line) => (<p className="mb-2 opacity-75" key={Math.random()}>{line}</p>))}
+              </ListGroup.Item>
+            ))
+            : (
+              <ListGroup.Item className="px-0 bg-transparent text-center mt-3 mt-md-5">
+                <h6 className="display-6 my-auto fw-bold mb-0 lh-1">No reviews yet.</h6>
+              </ListGroup.Item>
+            )
+        }
+      </ListGroup>
     </>
   );
 };
