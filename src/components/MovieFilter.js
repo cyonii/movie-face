@@ -9,7 +9,6 @@ const MovieFilter = () => {
     ['top_rated', 'Top Rated'],
     ['upcoming', 'Upcoming'],
     ['now_playing', 'Now Playing'],
-    ['latest', 'Latest'],
   ];
   const filterOptions = filterMatrix.map((f) => <option key={f[0]} value={f[0]}>{f[1]}</option>);
 
