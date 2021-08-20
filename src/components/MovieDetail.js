@@ -61,6 +61,8 @@ const MovieDetail = () => {
         </Col>
       </Row>
 
+      <hr className="mb-5" />
+
       <Row className="justify-content-center">
         <Col>
           <MovieReviews movieID={movie.id} />
