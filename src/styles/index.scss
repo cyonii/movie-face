@@ -27,8 +27,6 @@ code {
 
 // Movie card
 .movie-card {
-  min-height: 400px;
-
   &::after {
     content: "|||";
     width: 100%;
