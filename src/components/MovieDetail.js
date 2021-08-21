@@ -31,7 +31,7 @@ const MovieDetail = () => {
   return (
     <Container className="mt-5 text-white mb-5">
       <Row>
-        <Col className="col-12 col-md-6">
+        <Col md={6}>
           <img className="img-fluid" src={`https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`} alt={movie.title} />
           {movie.tagline ? <div className="alert alert-info rounded-0 py-2 mb-0">{movie.tagline}</div> : ''}
 
@@ -39,7 +39,7 @@ const MovieDetail = () => {
             {makeAttrColumn('col-12', 'GENRES', movie.genres.map((genre) => makeBadge(genre.name)))}
           </Row>
         </Col>
-        <Col className="col-12 col-md-6">
+        <Col md={6}>
           <h1 className="text-secondarys lh-1 mb-0"><b>{movie.title}</b></h1>
           <a href={movie.homepage} className="text-secondary fw-light" target="_blank" rel="noreferrer">
             <small>{movie.homepage}</small>
