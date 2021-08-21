@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import MovieFilter from './MovieFilter';
 
 const Header = () => (
-  <Navbar className="sticky-top" bg="light" expand="lg">
+  <Navbar className="sticky-top text-white" expand="lg" style={{ backgroundColor: '#1f1f1f' }}>
     <Container>
-      <Link to="/" className="navbar-brand">
+      <Link to="/" className="navbar-brand text-white">
         Movie
         <b className="fw-bold">Face</b>
       </Link>
