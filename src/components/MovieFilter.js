@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { updateMetaData } from '../redux/actions';
+import { setFilter } from '../redux/actions/metaData';
 
 const MovieFilter = () => {
   const filter = useSelector((state) => state.filter);
@@ -14,7 +14,7 @@ const MovieFilter = () => {
 
   const handleChange = (e) => {
     const { value } = e.target;
-    dispatch(updateMetaData({ filter: value }));
+    dispatch(setFilter(value));
   };
 
   return (

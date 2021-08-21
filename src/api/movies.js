@@ -3,8 +3,8 @@ import axios from 'axios';
 const API_KEY = 'fca3a09ec5fa268a31aa58f3449d68be';
 const BASE_URL = 'https://api.themoviedb.org/3/movie';
 
-const fetchMoviesByType = async (type) => {
-  const data = await axios.get(`${BASE_URL}/${type}?api_key=${API_KEY}&page=1`)
+const fetchMoviesByType = async (type, page) => {
+  const data = await axios.get(`${BASE_URL}/${type}?api_key=${API_KEY}&page=${page}`)
     .then((response) => response.data)
     .catch((error) => error.data);
 
