@@ -123,7 +123,7 @@ code {
   }
 }
 
-// Review row
+// Reviews
 #review-row {
   @include media-breakpoint-up(md) {
     height: 414px;
@@ -135,5 +135,12 @@ code {
 
   @include media-breakpoint-up(xl) {
     height: 460px;
+  }
+}
+
+.review-text {
+  @include media-breakpoint-up("md") {
+    font-size: 15px;
+    line-height: 1.2;
   }
 }

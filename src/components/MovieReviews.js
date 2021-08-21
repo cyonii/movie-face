@@ -22,7 +22,7 @@ const MovieReviews = (props) => {
                 <h6 className="text-info mb-0 lh-1">{`${review.author}`}</h6>
                 <small className="text-muted">{`Rating: ${review.author_details.rating}`}</small>
 
-                {review.content.split('\n').map((line) => (<p className="mb-2 opacity-75" key={Math.random()}>{line}</p>))}
+                {review.content.split('\n').map((line) => (<p className="mb-2 opacity-75 review-text" key={Math.random()}>{line}</p>))}
               </ListGroup.Item>
             ))
             : (
