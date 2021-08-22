@@ -19,8 +19,6 @@ const MoviesRow = ((props) => {
   } = props;
 
   useEffect(async () => {
-    // removeMovies();
-
     fetchMoviesByType(filter, page)
       .then((data) => {
         addMovies(data.results);
@@ -32,7 +30,7 @@ const MoviesRow = ((props) => {
   const handlePrev = () => decreasePage();
   const handleNext = () => increasePage();
 
-  // return Loading component if no movies
+  // return Loading indicator if no movies
   if (movies.length === 0) {
     return <Loading />;
   }
