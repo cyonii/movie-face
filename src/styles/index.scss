@@ -124,16 +124,19 @@ code {
 }
 
 // Reviews
-#review-row {
+.row-type-1 {
   @include media-breakpoint-up(md) {
+    min-height: 200px;
     height: 414px;
   }
 
   @include media-breakpoint-up(lg) {
+    min-height: 400px;
     height: 564px;
   }
 
   @include media-breakpoint-up(xl) {
+    min-height: 100px;
     height: 460px;
   }
 }
