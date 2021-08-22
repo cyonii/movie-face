@@ -62,7 +62,6 @@ MoviesRow.propTypes = {
   page: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired,
   addMovies: PropTypes.func.isRequired,
-  // removeMovies: PropTypes.func.isRequired,
   setTotalPages: PropTypes.func.isRequired,
   increasePage: PropTypes.func.isRequired,
   decreasePage: PropTypes.func.isRequired,
