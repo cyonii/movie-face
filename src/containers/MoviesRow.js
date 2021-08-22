@@ -14,17 +14,19 @@ import { fetchMoviesByType } from '../api/movies';
 const MoviesRow = ((props) => {
   const {
     movies, filter, page, totalPages,
-    addMovies, removeMovies, setTotalPages,
+    addMovies, setTotalPages,
     increasePage, decreasePage,
   } = props;
 
   useEffect(async () => {
-    removeMovies();
+    // removeMovies();
 
-    const data = await fetchMoviesByType(filter, page);
-
-    addMovies(data.results);
-    setTotalPages(data.total_pages);
+    fetchMoviesByType(filter, page)
+      .then((data) => {
+        addMovies(data.results);
+        setTotalPages(data.total_pages);
+      })
+      .catch(() => []);
   }, [filter, page]);
 
   const handlePrev = () => decreasePage();
@@ -60,7 +62,7 @@ MoviesRow.propTypes = {
   page: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired,
   addMovies: PropTypes.func.isRequired,
-  removeMovies: PropTypes.func.isRequired,
+  // removeMovies: PropTypes.func.isRequired,
   setTotalPages: PropTypes.func.isRequired,
   increasePage: PropTypes.func.isRequired,
   decreasePage: PropTypes.func.isRequired,
