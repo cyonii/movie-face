@@ -11,7 +11,7 @@ function App() {
 
       <Switch>
         <Route path="/" exact>
-          <Container className="p-0">
+          <Container>
             <MovieRow />
           </Container>
         </Route>
