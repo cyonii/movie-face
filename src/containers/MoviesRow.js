@@ -1,9 +1,10 @@
+import { useEffect } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import { useEffect } from 'react';
-import { connect, useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import { addMovies, removeMovies } from '../redux/actions/movies';
 import { setTotalPages, increasePage, decreasePage } from '../redux/actions/metaData';
 import MovieColumn from '../components/MovieColumn';
@@ -13,20 +14,21 @@ import { fetchMoviesByType } from '../api/movies';
 const MoviesRow = ((props) => {
   const {
     movies, filter, page, totalPages,
+    addMovies, removeMovies, setTotalPages,
+    increasePage, decreasePage,
   } = props;
-  const dispatch = useDispatch();
 
   useEffect(async () => {
-    dispatch(removeMovies());
+    removeMovies();
 
     const data = await fetchMoviesByType(filter, page);
 
-    dispatch(addMovies(data.results));
-    dispatch(setTotalPages(data.total_pages));
+    addMovies(data.results);
+    setTotalPages(data.total_pages);
   }, [filter, page]);
 
-  const handlePrev = () => dispatch(decreasePage());
-  const handleNext = () => dispatch(increasePage());
+  const handlePrev = () => decreasePage();
+  const handleNext = () => increasePage();
 
   // return Loading component if no movies
   if (movies.length === 0) {
@@ -44,8 +46,8 @@ const MoviesRow = ((props) => {
           <span className="mx-1 text-white mb-3">{`Page: ${page} of ${totalPages}`}</span>
           <br />
           <br />
-          <Button variant="light" className="rounded-pill px-5 me-1" onClick={handlePrev}>Prev</Button>
-          <Button variant="light" className="rounded-pill px-5 ms-1" onClick={handleNext}>Next</Button>
+          <Button variant="light" className="rounded-pill px-5 me-1" onClick={handlePrev} disabled={page === 1}>Prev</Button>
+          <Button variant="light" className="rounded-pill px-5 ms-1" onClick={handleNext} disabled={page === totalPages}>Next</Button>
         </Col>
       </Row>
     </>
@@ -57,6 +59,11 @@ MoviesRow.propTypes = {
   filter: PropTypes.string.isRequired,
   page: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired,
+  addMovies: PropTypes.func.isRequired,
+  removeMovies: PropTypes.func.isRequired,
+  setTotalPages: PropTypes.func.isRequired,
+  increasePage: PropTypes.func.isRequired,
+  decreasePage: PropTypes.func.isRequired,
 };
 
 const mapState = (state) => ({
@@ -66,4 +73,12 @@ const mapState = (state) => ({
   totalPages: state.metaData.totalPages,
 });
 
-export default connect(mapState)(MoviesRow);
+const mapDispatch = (dispatch) => bindActionCreators({
+  addMovies,
+  removeMovies,
+  setTotalPages,
+  increasePage,
+  decreasePage,
+}, dispatch);
+
+export default connect(mapState, mapDispatch)(MoviesRow);
