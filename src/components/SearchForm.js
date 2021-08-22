@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { addMovies } from '../redux/actions/movies';
-import { setTotalPages, resetPage } from '../redux/actions/metaData';
+import { setFilter, setTotalPages, resetPage } from '../redux/actions/metaData';
 import moviedb from '../api/movies';
 
 const SearchForm = () => {
@@ -16,6 +16,7 @@ const SearchForm = () => {
 
     moviedb.searchMovie({ query: search, page })
       .then((data) => {
+        dispatch(setFilter(''));
         dispatch(resetPage());
         dispatch(addMovies(data.results));
         dispatch(setTotalPages(data.total_pages));
