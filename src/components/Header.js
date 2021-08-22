@@ -8,7 +8,7 @@ import SearchForm from './SearchForm';
 const Header = () => (
   <Navbar variant="dark" className="sticky-top text-white" expand="md" style={{ backgroundColor: '#1f1f1f' }}>
     <Container>
-      <Link href="/" className="navbar-brand text-white">
+      <Link to="/" className="navbar-brand text-white">
         Movie
         <b className="fw-bold">Face</b>
       </Link>
