@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import { addMovies, removeMovies } from '../redux/actions/movies';
+import { addMovies } from '../redux/actions/movies';
 import { setTotalPages, increasePage, decreasePage } from '../redux/actions/metaData';
 import MovieColumn from '../components/MovieColumn';
 import Loading from '../components/Loading';
@@ -14,7 +14,7 @@ import moviedb from '../api/movies';
 const MoviesRow = ((props) => {
   const {
     movies, filter, page, totalPages,
-    addMovies, removeMovies, setTotalPages,
+    addMovies, setTotalPages,
     increasePage, decreasePage,
   } = props;
 
@@ -24,20 +24,20 @@ const MoviesRow = ((props) => {
   };
 
   useEffect(async () => {
-    removeMovies();
+    const params = { page };
 
     switch (filter) {
       case 'popular':
-        moviedb.moviePopular().then((data) => handleMoviesData(data));
+        moviedb.moviePopular(params).then((data) => handleMoviesData(data));
         break;
       case 'top_rated':
-        moviedb.movieTopRated().then((data) => handleMoviesData(data));
+        moviedb.movieTopRated(params).then((data) => handleMoviesData(data));
         break;
       case 'upcoming':
-        moviedb.upcomingMovies().then((data) => handleMoviesData(data));
+        moviedb.upcomingMovies(params).then((data) => handleMoviesData(data));
         break;
       case 'now_playing':
-        moviedb.movieNowPlaying().then((data) => handleMoviesData(data));
+        moviedb.movieNowPlaying(params).then((data) => handleMoviesData(data));
         break;
       default:
         break;
@@ -77,7 +77,6 @@ MoviesRow.propTypes = {
   page: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired,
   addMovies: PropTypes.func.isRequired,
-  removeMovies: PropTypes.func.isRequired,
   setTotalPages: PropTypes.func.isRequired,
   increasePage: PropTypes.func.isRequired,
   decreasePage: PropTypes.func.isRequired,
@@ -92,7 +91,6 @@ const mapState = (state) => ({
 
 const mapDispatch = (dispatch) => bindActionCreators({
   addMovies,
-  removeMovies,
   setTotalPages,
   increasePage,
   decreasePage,
