@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { fetchReviews } from '../api/movies';
+import moviedb from '../api/movies';
 
 const MovieReviews = (props) => {
   const { movieID } = props;
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetchReviews(movieID).then((data) => setReviews(data.results));
+    moviedb.movieReviews(movieID).then((data) => setReviews(data.results));
   }, []);
 
   return (

@@ -1,19 +1,21 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import { Link } from 'react-router-dom';
 import MovieFilter from './MovieFilter';
 
 const Header = () => (
-  <Navbar className="sticky-top text-white" expand="lg" style={{ backgroundColor: '#1f1f1f' }}>
+  <Navbar variant="dark" className="sticky-top text-white" expand="md" style={{ backgroundColor: '#1f1f1f' }}>
     <Container>
-      <Link to="/" className="navbar-brand text-white">
+      <Navbar.Brand href="/" className="text-white">
         Movie
         <b className="fw-bold">Face</b>
-      </Link>
-      <Nav>
-        <MovieFilter />
-      </Nav>
+      </Navbar.Brand>
+      <Navbar.Toggle className="border-0" aria-controls="navbarScroll" />
+      <Navbar.Collapse>
+        <Nav className="align-items-md-center my-5 my-md-0 ms-auto">
+          <MovieFilter />
+        </Nav>
+      </Navbar.Collapse>
     </Container>
   </Navbar>
 );

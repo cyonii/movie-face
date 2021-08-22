@@ -5,13 +5,17 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MovieReviews from './MovieReviews';
 import Suspense from './Loading';
-import { fetchMovie } from '../api/movies';
+import moviedb from '../api/movies';
 
 const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
 
-  useEffect(async () => setMovie(await fetchMovie(id)), []);
+  useEffect(async () => {
+    await moviedb.movieInfo(id)
+      .then((data) => setMovie(data))
+      .catch((err) => err);
+  });
 
   // Return loading indicator if movie data is not fetched
   if (movie.id === undefined) {

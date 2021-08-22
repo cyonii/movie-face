@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
+import Form from 'react-bootstrap/Form';
 import { setFilter } from '../redux/actions/metaData';
 
 const MovieFilter = () => {
@@ -18,17 +19,18 @@ const MovieFilter = () => {
   };
 
   return (
-    <label className="d-flex align-items-center form-label mb-0" htmlFor="movie-filter">
+    <Form.Label className="d-flex align-items-center form-label mb-0" htmlFor="movie-filter">
       Showing
-      <select
+      <Form.Select
         value={filter}
         onChange={handleChange}
-        className="form-control form-select border-dark w-auto ms-2"
+        className="form-control form-select rounded-0 border-dark w-auto ms-2"
         id="movie-filter"
+        aria-label="'Showing' filter form"
       >
         {filterOptions}
-      </select>
-    </label>
+      </Form.Select>
+    </Form.Label>
   );
 };
 

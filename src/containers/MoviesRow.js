@@ -9,22 +9,39 @@ import { addMovies, removeMovies } from '../redux/actions/movies';
 import { setTotalPages, increasePage, decreasePage } from '../redux/actions/metaData';
 import MovieColumn from '../components/MovieColumn';
 import Loading from '../components/Loading';
-import { fetchMoviesByType } from '../api/movies';
+import moviedb from '../api/movies';
 
 const MoviesRow = ((props) => {
   const {
     movies, filter, page, totalPages,
-    addMovies, setTotalPages,
+    addMovies, removeMovies, setTotalPages,
     increasePage, decreasePage,
   } = props;
 
+  const handleMoviesData = (data) => {
+    addMovies(data.results);
+    setTotalPages(data.total_pages);
+  };
+
   useEffect(async () => {
-    fetchMoviesByType(filter, page)
-      .then((data) => {
-        addMovies(data.results);
-        setTotalPages(data.total_pages);
-      })
-      .catch(() => []);
+    removeMovies();
+
+    switch (filter) {
+      case 'popular':
+        moviedb.moviePopular().then((data) => handleMoviesData(data));
+        break;
+      case 'top_rated':
+        moviedb.movieTopRated().then((data) => handleMoviesData(data));
+        break;
+      case 'upcoming':
+        moviedb.upcomingMovies().then((data) => handleMoviesData(data));
+        break;
+      case 'now_playing':
+        moviedb.movieNowPlaying().then((data) => handleMoviesData(data));
+        break;
+      default:
+        break;
+    }
   }, [filter, page]);
 
   const handlePrev = () => decreasePage();
@@ -60,6 +77,7 @@ MoviesRow.propTypes = {
   page: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired,
   addMovies: PropTypes.func.isRequired,
+  removeMovies: PropTypes.func.isRequired,
   setTotalPages: PropTypes.func.isRequired,
   increasePage: PropTypes.func.isRequired,
   decreasePage: PropTypes.func.isRequired,
