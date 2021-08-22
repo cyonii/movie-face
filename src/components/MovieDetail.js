@@ -53,8 +53,8 @@ const MovieDetail = () => {
             {makeAttrColumn('col-6 col-lg-4', 'VOTE COUNT', `${movie.vote_count}`)}
             {makeAttrColumn('col-6 col-lg-4', 'POPULARITY', `${movie.popularity}%`)}
             <Row>
-              {makeAttrColumn('col-md-6', 'GENRES', movie.genres.map((genre) => makeBadge(genre.name)))}
-              {makeAttrColumn('col-md-6', 'SPOKEN LANGUAGES', movie.spoken_languages.map((lang) => makeBadge(lang.name)))}
+              {makeAttrColumn('col-12 col-md-6', 'GENRES', movie.genres.map((genre) => makeBadge(genre.name)))}
+              {makeAttrColumn('col-12 col-md-6', 'SPOKEN LANGUAGES', movie.spoken_languages.map((lang) => makeBadge(lang.name)))}
             </Row>
           </Row>
         </Col>
