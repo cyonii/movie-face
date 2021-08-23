@@ -15,7 +15,7 @@ const MovieDetail = () => {
     await moviedb.movieInfo(id)
       .then((data) => setMovie(data))
       .catch((err) => err);
-  });
+  }, []);
 
   // Return loading indicator if movie data is not fetched
   if (movie.id === undefined) {
