@@ -12,7 +12,9 @@ const MovieColumn = (props) => {
         <Card.Img className="rounded-0" src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} loading="lazy" />
 
         <Card.Body className="text-white opacity-100">
-          <Card.Img className="card-img mb-2" src={`https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`} />
+          { movie.backdrop_path
+            ? <Card.Img className="card-img mb-2" src={`https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`} />
+            : ''}
           <Card.Title className="fs-6 fw-bold">{movie.title}</Card.Title>
           <Card.Text>
             <span className="text-muted">Rating:&nbsp;&nbsp;</span>
