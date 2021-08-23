@@ -50,6 +50,7 @@ code {
 
 // Movie card
 .movie-card {
+  min-height: 250px;
   overflow: hidden;
 
   &::after {

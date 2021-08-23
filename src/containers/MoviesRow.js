@@ -13,7 +13,7 @@ import moviedb from '../api/movies';
 
 const MoviesRow = ((props) => {
   const {
-    movies, filter, page, totalPages,
+    movies, filter, query, page, totalPages,
     addMovies, setTotalPages,
     increasePage, decreasePage,
   } = props;
@@ -30,14 +30,17 @@ const MoviesRow = ((props) => {
       case 'popular':
         moviedb.moviePopular(params).then((data) => handleMoviesData(data));
         break;
-      case 'top_rated':
+      case 'topRated':
         moviedb.movieTopRated(params).then((data) => handleMoviesData(data));
         break;
       case 'upcoming':
         moviedb.upcomingMovies(params).then((data) => handleMoviesData(data));
         break;
-      case 'now_playing':
+      case 'nowPlaying':
         moviedb.movieNowPlaying(params).then((data) => handleMoviesData(data));
+        break;
+      case 'search':
+        moviedb.searchMovie({ query, ...params }).then((data) => handleMoviesData(data));
         break;
       default:
         break;
@@ -49,7 +52,13 @@ const MoviesRow = ((props) => {
 
   // return Loading indicator if no movies
   if (movies.length === 0) {
-    return <Loading />;
+    <Loading />;
+    return (
+      <div className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '50vh' }}>
+        <Loading />
+        <h6 className="display-6 fw-bold mb-0 lh-1">Loading</h6>
+      </div>
+    );
   }
 
   return (
@@ -74,6 +83,7 @@ const MoviesRow = ((props) => {
 MoviesRow.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.instanceOf(Object)).isRequired,
   filter: PropTypes.string.isRequired,
+  query: PropTypes.string.isRequired,
   page: PropTypes.number.isRequired,
   totalPages: PropTypes.number.isRequired,
   addMovies: PropTypes.func.isRequired,
@@ -85,6 +95,7 @@ MoviesRow.propTypes = {
 const mapState = (state) => ({
   movies: state.movies,
   filter: state.metaData.filter,
+  query: state.metaData.query,
   page: state.metaData.page,
   totalPages: state.metaData.totalPages,
 });

@@ -1,37 +1,28 @@
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { addMovies } from '../redux/actions/movies';
-import { setFilter, setTotalPages, resetPage } from '../redux/actions/metaData';
-import moviedb from '../api/movies';
+import { setFilter, setQuery } from '../redux/actions/metaData';
 
 const SearchForm = () => {
-  const [search, setSearch] = useState('');
-  const page = useSelector((state) => state.metaData.page);
   const dispatch = useDispatch();
+
+  const handleQueryInput = (e) => {
+    dispatch(setQuery(e.target.value));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    moviedb.searchMovie({ query: search, page })
-      .then((data) => {
-        dispatch(setFilter(''));
-        dispatch(resetPage());
-        dispatch(addMovies(data.results));
-        dispatch(setTotalPages(data.total_pages));
-      })
-      .catch((err) => err);
+    dispatch(setFilter('search'));
   };
 
   return (
     <Form className="d-flex" onSubmit={handleSubmit}>
       <Form.Control
         type="search"
-        placeholder="Movie or show name"
+        placeholder="Movie or show title"
         className="rounded-0 border-0"
-        aria-label="Name of movie or show"
-        onChange={(e) => setSearch(e.target.value)}
+        aria-label="Movie or show title"
+        onChange={handleQueryInput}
       />
       <Button type="submit" variant="success" className="rounded-0 no-outline">Search</Button>
     </Form>
