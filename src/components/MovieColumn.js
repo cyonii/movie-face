@@ -5,11 +5,20 @@ import Card from 'react-bootstrap/Card';
 
 const MovieColumn = (props) => {
   const { movie } = props;
+  const assetsUrl = 'https://image.tmdb.org/t/p/w780';
 
   return (
     <Col xs={6} sm={4} md={3}>
       <Card className="movie-card bg-dark h-100 rounded-0 border-0">
-        <Card.Img className="rounded-0" src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} loading="lazy" />
+        {/* Use placeholder if movie poster is unavailable */}
+        { movie.poster_path
+          ? <Card.Img className="rounded-0 bg-dark" src={`${assetsUrl}/${movie.poster_path}`} alt={movie.title} loading="lazy" />
+          : (
+            <div className="movie-card-placeholder">
+              <h6 className="text-light opacity-75">{movie.title}</h6>
+              <i className="bi bi-image-alt display-4" />
+            </div>
+          )}
 
         <Card.Body className="text-white opacity-100">
           { movie.backdrop_path
