@@ -28,7 +28,7 @@ const SearchForm = () => {
     <Form className="d-flex" onSubmit={handleSubmit}>
       <Form.Control
         type="search"
-        placeholder="Search"
+        placeholder="Movie or show name"
         className="rounded-0 border-0"
         aria-label="Name of movie or show"
         onChange={(e) => setSearch(e.target.value)}
