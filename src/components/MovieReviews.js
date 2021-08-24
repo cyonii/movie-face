@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
-import moviedb from '../api/movies';
+import { moviedb } from '../api/movies';
 
 const MovieReviews = (props) => {
   const { movieID } = props;

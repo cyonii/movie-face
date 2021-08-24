@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import { addMovies } from '../redux/actions/movies';
 import { setTotalPages, increasePage, decreasePage } from '../redux/actions/metaData';
 import MovieColumn from '../components/MovieColumn';
+import { fetchMoviesByFilter } from '../api/movies';
 import Loading from '../components/Loading';
 import moviedb from '../api/movies';
 
@@ -18,33 +19,25 @@ const MoviesRow = ((props) => {
     increasePage, decreasePage,
   } = props;
 
-  const handleMoviesData = (data) => {
-    addMovies(data.results);
-    setTotalPages(data.total_pages);
+  const handleMoviePromise = async (promise) => {
+    await promise
+      .then((data) => {
+        addMovies(data.results);
+        setTotalPages(data.total_pages);
+      })
+      .catch((err) => err);
   };
 
   useEffect(async () => {
-    const params = { page };
+    // setLoading(true);
+    const response = fetchMoviesByFilter(filter, { page, query });
+    await handleMoviePromise(response);
 
-    switch (filter) {
-      case 'popular':
-        moviedb.moviePopular(params).then((data) => handleMoviesData(data));
-        break;
-      case 'topRated':
-        moviedb.movieTopRated(params).then((data) => handleMoviesData(data));
-        break;
-      case 'upcoming':
-        moviedb.upcomingMovies(params).then((data) => handleMoviesData(data));
-        break;
-      case 'nowPlaying':
-        moviedb.movieNowPlaying(params).then((data) => handleMoviesData(data));
-        break;
-      case 'search':
-        moviedb.searchMovie({ query, ...params }).then((data) => handleMoviesData(data));
-        break;
-      default:
-        break;
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setLoading(false);
+
+    // Falsify loading state if already true
+    // if (loading === true) setLoading(false);
   }, [filter, page]);
 
   const handlePrev = () => decreasePage();

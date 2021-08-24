@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MovieReviews from './MovieReviews';
 import Loading from './Loading';
+import { moviedb } from '../api/movies';
 
 const MovieDetail = () => {
   const { id } = useParams();
