@@ -36,6 +36,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+[disabled=""],
+[disabled="true"] {
+  cursor: not-allowed;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 992px;
