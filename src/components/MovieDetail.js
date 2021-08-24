@@ -4,8 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MovieReviews from './MovieReviews';
-import Suspense from './Loading';
-import moviedb from '../api/movies';
+import Loading from './Loading';
 
 const MovieDetail = () => {
   const { id } = useParams();
@@ -19,7 +18,7 @@ const MovieDetail = () => {
 
   // Return loading indicator if movie data is not fetched
   if (movie.id === undefined) {
-    return (<Suspense />);
+    return (<Loading />);
   }
 
   const makeBadge = (text) => <div className="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2" key={text}>{text}</div>;
