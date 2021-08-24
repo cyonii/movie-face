@@ -7,13 +7,13 @@ const MovieFilter = () => {
   const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
   const history = useHistory();
-  const filterMatrix = [
+  const optionGroups = [
     ['popular', 'Popular'],
     ['topRated', 'Top Rated'],
     ['upcoming', 'Upcoming'],
     ['nowPlaying', 'Now Playing'],
   ];
-  const filterOptions = filterMatrix.map((opGroup) => (
+  const filterOptions = optionGroups.map((opGroup) => (
     <option key={opGroup[0]} value={opGroup[0]}>{opGroup[1]}</option>
   ));
 
