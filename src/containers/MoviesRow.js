@@ -52,19 +52,15 @@ const MoviesRow = ((props) => {
   if (movies.length < 1) return <h2 className="mt-5 text-center">No movies found!</h2>;
 
   return (
-    <>
-      (
-      <Row className="g-0">
-        {movies.map((movie) => <MovieColumn movie={movie} key={movie.id} />)}
+    <Row className="g-0">
+      {movies.map((movie) => <MovieColumn movie={movie} key={movie.id} />)}
 
-        <Col xs={12} className="text-center my-5">
-          { totalPages >= 1 && <p className="mx-1 text-white mb-3">{`Page: ${page} of ${totalPages}`}</p> }
-          <Button variant="light" className={btnClass} onClick={decreasePage} disabled={shouldDisablePrev}>Prev</Button>
-          <Button variant="light" className={btnClass} onClick={increasePage} disabled={shouldDisableNext}>Next</Button>
-        </Col>
-      </Row>
-      )
-    </>
+      <Col xs={12} className="text-center my-5">
+        { totalPages >= 1 && <p className="mx-1 text-white mb-3">{`Page: ${page} of ${totalPages}`}</p> }
+        <Button variant="light" className={btnClass} onClick={decreasePage} disabled={shouldDisablePrev}>Prev</Button>
+        <Button variant="light" className={btnClass} onClick={increasePage} disabled={shouldDisableNext}>Next</Button>
+      </Col>
+    </Row>
   );
 });
 
