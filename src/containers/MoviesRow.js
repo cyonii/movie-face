@@ -12,7 +12,7 @@ import { fetchMoviesByFilter } from '../api/movies';
 import Loading from '../components/Loading';
 
 const MoviesRow = ((props) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const {
     movies,
     metaData,
@@ -41,27 +41,29 @@ const MoviesRow = ((props) => {
     await handleMoviePromise(response);
 
     setLoading(false);
-  }, [filter, page]);
+  }, [filter, page, query]);
+
+  const btnClass = 'rounded-pill px-5 me-1';
+  const shouldDisableNext = page === totalPages || totalPages === 0;
+  const shouldDisablePrev = page === 1 || totalPages === 0;
 
   if (loading) return <Loading />;
 
-  if (movies.length === 0) {
-    return <h6 className="display-6 mt-5 text-center">No movies found!</h6>;
-  }
+  if (movies.length < 1) return <h2 className="mt-5 text-center">No movies found!</h2>;
 
   return (
     <>
+      (
       <Row className="g-0">
         {movies.map((movie) => <MovieColumn movie={movie} key={movie.id} />)}
-      </Row>
 
-      <Row>
-        <Col className="text-center my-5">
-          <p className="mx-1 text-white mb-3">{`Page: ${page} of ${totalPages}`}</p>
-          <Button variant="light" className="rounded-pill px-5 me-1" onClick={decreasePage} disabled={page === 1}>Prev</Button>
-          <Button variant="light" className="rounded-pill px-5 ms-1" onClick={increasePage} disabled={page === totalPages}>Next</Button>
+        <Col xs={12} className="text-center my-5">
+          { totalPages >= 1 && <p className="mx-1 text-white mb-3">{`Page: ${page} of ${totalPages}`}</p> }
+          <Button variant="light" className={btnClass} onClick={decreasePage} disabled={shouldDisablePrev}>Prev</Button>
+          <Button variant="light" className={btnClass} onClick={increasePage} disabled={shouldDisableNext}>Next</Button>
         </Col>
       </Row>
+      )
     </>
   );
 });
