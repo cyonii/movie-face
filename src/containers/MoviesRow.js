@@ -21,7 +21,9 @@ const MoviesRow = ((props) => {
     increasePage,
     decreasePage,
   } = props;
-  const { page, totalPages } = metaData;
+  const {
+    filter, query, page, totalPages,
+  } = metaData;
 
   const handleMoviePromise = async (promise) => {
     await promise
@@ -35,11 +37,11 @@ const MoviesRow = ((props) => {
   useEffect(async () => {
     setLoading(true);
 
-    const response = fetchMoviesByFilter(metaData.filter, { page, query: metaData.query });
+    const response = fetchMoviesByFilter(filter, { page, query });
     await handleMoviePromise(response);
 
     setLoading(false);
-  }, [metaData.filter, page]);
+  }, [filter, page]);
 
   if (loading) return <Loading />;
 
