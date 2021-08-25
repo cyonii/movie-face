@@ -1,5 +1,5 @@
 import {
-  SET_FILTER, SET_QUERY, SET_TOTAL_PAGES, INCREASE_PAGE, DECREASE_PAGE, RESET_PAGE,
+  SET_FILTER, SET_QUERY, SET_TOTAL_PAGES, INCREASE_PAGE, DECREASE_PAGE,
 } from '../actions/types';
 
 const initialState = {
@@ -23,8 +23,6 @@ export default (state = initialState, action) => {
       return { ...state, page: state.page + 1 };
     case DECREASE_PAGE:
       return { ...state, page: state.page - 1 };
-    case RESET_PAGE:
-      return { ...state, page: 1 };
     default:
       return state;
   }

@@ -1,5 +1,5 @@
 import {
-  SET_FILTER, SET_QUERY, SET_TOTAL_PAGES, INCREASE_PAGE, DECREASE_PAGE, RESET_PAGE,
+  SET_FILTER, SET_QUERY, SET_TOTAL_PAGES, INCREASE_PAGE, DECREASE_PAGE,
 } from './types';
 
 const setFilter = (filter) => ({
@@ -25,13 +25,10 @@ const decreasePage = () => ({
   type: DECREASE_PAGE,
 });
 
-const resetPage = () => ({ type: RESET_PAGE });
-
 export {
   setFilter,
   setQuery,
   setTotalPages,
   increasePage,
   decreasePage,
-  resetPage,
 };
