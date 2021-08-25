@@ -52,7 +52,7 @@ const MoviesRow = ((props) => {
   if (movies.length < 1) return <h2 className="mt-5 text-center">No movies found!</h2>;
 
   return (
-    <Row className="g-0">
+    <Row className="g-1">
       {movies.map((movie) => <MovieColumn movie={movie} key={movie.id} />)}
 
       <Col xs={12} className="text-center my-5">
