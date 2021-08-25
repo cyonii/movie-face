@@ -4,15 +4,16 @@ const moviedb = new MovieDb(process.env.REACT_APP_TMDB_API_KEY);
 
 const fetchMoviesByFilter = async (filter, params) => {
   let response;
+  const { page } = params;
 
   if (filter === 'popular') {
-    response = moviedb.moviePopular(params);
+    response = moviedb.moviePopular({ page });
   } else if (filter === 'topRated') {
-    response = moviedb.movieTopRated(params);
+    response = moviedb.movieTopRated({ page });
   } else if (filter === 'upcoming') {
-    response = moviedb.upcomingMovies(params);
+    response = moviedb.upcomingMovies({ page });
   } else if (filter === 'nowPlaying') {
-    response = moviedb.movieNowPlaying(params);
+    response = moviedb.movieNowPlaying({ page });
   } else if (filter === 'search') {
     response = moviedb.searchMovie(params);
   }
