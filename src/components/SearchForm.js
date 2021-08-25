@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
@@ -7,13 +8,15 @@ import { setFilter, setQuery } from '../redux/actions/metaData';
 const SearchForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
+  const [searchInput, setSearchInput] = useState('');
 
   const handleQueryInput = (e) => {
-    dispatch(setQuery(e.target.value));
+    setSearchInput(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(setQuery(searchInput));
     dispatch(setFilter('search'));
     history.push('/');
   };
