@@ -1,10 +1,9 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import { setFilter } from '../redux/actions/metaData';
 
 const MovieFilter = () => {
-  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
   const history = useHistory();
   const optionGroups = [
@@ -26,7 +25,6 @@ const MovieFilter = () => {
     <Form.Label className="d-flex align-items-center form-label mb-0" htmlFor="movie-filter">
       <span className="d-none d-lg-inline me-2">Showing</span>
       <Form.Select
-        value={filter}
         onChange={handleChange}
         className="form-control form-select rounded-0"
         id="movie-filter"
