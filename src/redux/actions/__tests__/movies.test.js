@@ -1,4 +1,4 @@
-import { addMovies } from '../../../redux/actions/movies';
+import { addMovies } from '../../actions/movies';
 
 describe('Movie Actions', () => {
   describe('addMovies', () => {

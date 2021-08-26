@@ -1,5 +1,5 @@
-import movieReducer from '../../../redux/reducers/movies';
-import { addMovies } from '../../../redux/actions/movies';
+import movieReducer from '../../reducers/movies';
+import { addMovies } from '../../actions/movies';
 import movies from './movies.json';
 
 describe('movieReducer', () => {

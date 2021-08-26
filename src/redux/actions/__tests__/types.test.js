@@ -5,7 +5,7 @@ import {
   SET_TOTAL_PAGES,
   INCREASE_PAGE,
   DECREASE_PAGE,
-} from '../../../redux/actions/types';
+} from '../../actions/types';
 
 describe('Actions Types', () => {
   test('ADD_MOVIES should have the correct action text', () => {

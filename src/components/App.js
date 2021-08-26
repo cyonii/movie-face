@@ -6,7 +6,7 @@ import MovieDetail from './MovieDetail';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter data-testid="app">
       <Header />
 
       <Switch>

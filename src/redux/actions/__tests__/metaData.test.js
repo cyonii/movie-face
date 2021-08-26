@@ -4,7 +4,7 @@ import {
   setTotalPages,
   increasePage,
   decreasePage,
-} from '../../../redux/actions/metaData';
+} from '../metaData';
 
 describe('metaData Actions', () => {
   it('setFilter should return the correct action', () => {

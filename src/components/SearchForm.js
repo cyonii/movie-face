@@ -22,7 +22,7 @@ const SearchForm = () => {
   };
 
   return (
-    <Form className="d-flex" onSubmit={handleSubmit}>
+    <Form className="d-flex" onSubmit={handleSubmit} data-testid="search-form">
       <Form.Control
         type="search"
         placeholder="Movie or show title"

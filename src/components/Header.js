@@ -5,7 +5,7 @@ import MovieFilter from './MovieFilter';
 import SearchForm from './SearchForm';
 
 const Header = () => (
-  <Navbar variant="dark" className="sticky-top text-white" expand="md" style={{ backgroundColor: '#1f1f1f' }}>
+  <Navbar variant="dark" className="sticky-top text-white" expand="md" data-testid="header" style={{ backgroundColor: '#1f1f1f' }}>
     <Container>
       <a href="/" className="navbar-brand text-white">
         Movie

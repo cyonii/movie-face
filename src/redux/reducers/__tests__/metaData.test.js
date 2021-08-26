@@ -1,11 +1,11 @@
-import metaDataReducer from '../../../redux/reducers/metaData';
+import metaDataReducer from '../metaData';
 import {
   setFilter,
   setQuery,
   setTotalPages,
   increasePage,
   decreasePage,
-} from '../../../redux/actions/metaData';
+} from '../../actions/metaData';
 
 describe('metaDataReducer', () => {
   let initialState = {};
