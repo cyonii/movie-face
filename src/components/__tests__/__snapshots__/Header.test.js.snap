@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render correctly 1`] = `
+<nav
+  class="sticky-top text-white navbar navbar-expand-md navbar-dark"
+  data-testid="header"
+  style="background-color: rgb(31, 31, 31);"
+>
+  <div
+    class="container"
+  >
+    <a
+      class="navbar-brand text-white"
+      href="/"
+    >
+      Movie
+      <b
+        class="fw-bold"
+      >
+        Face
+      </b>
+    </a>
+    <button
+      aria-controls="navbarScroll"
+      aria-label="Toggle navigation"
+      class="border-0 navbar-toggler collapsed"
+      type="button"
+    >
+      <span
+        class="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      class="navbar-collapse collapse"
+    >
+      <div
+        class="align-items-md-center my-5 my-md-0 ms-auto navbar-nav"
+      >
+        <form
+          class="d-flex"
+          data-testid="search-form"
+        >
+          <input
+            aria-label="Movie or show title"
+            class="rounded-0 border-0 form-control"
+            placeholder="Movie or show title"
+            type="search"
+          />
+          <button
+            class="rounded-0 no-outline btn btn-success"
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
+        <span
+          class="d-none d-md-block mx-md-2 text-muted"
+        >
+          |
+        </span>
+        <form
+          class=""
+          data-testid="filter-form"
+        >
+          <label
+            class="form-label d-flex align-items-center mb-0 form-label"
+            for="filter"
+          >
+            <span
+              class="d-none d-lg-inline me-2"
+            >
+              Showing
+            </span>
+            <select
+              aria-label="'Showing' filter form"
+              class="form-control form-select rounded-0 form-select"
+              id="filter"
+            >
+              <option
+                value="popular"
+              >
+                Popular
+              </option>
+              <option
+                value="topRated"
+              >
+                Top Rated
+              </option>
+              <option
+                value="upcoming"
+              >
+                Upcoming
+              </option>
+              <option
+                value="nowPlaying"
+              >
+                Now Playing
+              </option>
+            </select>
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`Header should render correctly 2`] = `
+<form
+  class=""
+  data-testid="filter-form"
+>
+  <label
+    class="form-label d-flex align-items-center mb-0 form-label"
+    for="filter"
+  >
+    <span
+      class="d-none d-lg-inline me-2"
+    >
+      Showing
+    </span>
+    <select
+      aria-label="'Showing' filter form"
+      class="form-control form-select rounded-0 form-select"
+      id="filter"
+    >
+      <option
+        value="popular"
+      >
+        Popular
+      </option>
+      <option
+        value="topRated"
+      >
+        Top Rated
+      </option>
+      <option
+        value="upcoming"
+      >
+        Upcoming
+      </option>
+      <option
+        value="nowPlaying"
+      >
+        Now Playing
+      </option>
+    </select>
+  </label>
+</form>
+`;
+
+exports[`Header should render correctly 3`] = `
+<form
+  class="d-flex"
+  data-testid="search-form"
+>
+  <input
+    aria-label="Movie or show title"
+    class="rounded-0 border-0 form-control"
+    placeholder="Movie or show title"
+    type="search"
+  />
+  <button
+    class="rounded-0 no-outline btn btn-success"
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+`;
