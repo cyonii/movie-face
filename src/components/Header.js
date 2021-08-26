@@ -5,12 +5,12 @@ import MovieFilter from './MovieFilter';
 import SearchForm from './SearchForm';
 
 const Header = () => (
-  <Navbar variant="dark" className="sticky-top text-white" expand="md" data-testid="header" style={{ backgroundColor: '#1f1f1f' }}>
+  <Navbar variant="dark" className="sticky-top text-white" expand="md" id="header" data-testid="header">
     <Container>
-      <a href="/" className="navbar-brand text-white">
+      <Navbar.Brand href="/" className="navbar-brand text-white">
         Movie
         <b className="fw-bold">Face</b>
-      </a>
+      </Navbar.Brand>
       <Navbar.Toggle className="border-0" aria-controls="navbarScroll" />
       <Navbar.Collapse>
         <Nav className="align-items-md-center my-5 my-md-0 ms-auto">
