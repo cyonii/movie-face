@@ -59,6 +59,7 @@ code {
   }
 }
 
+// COMPONENTS
 // Movie card
 .movie-card {
   min-height: 250px;
@@ -66,16 +67,15 @@ code {
 
   &::after {
     content: "";
-    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z' clip-rule='evenodd'/></svg>");
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z' clip-rule='evenodd'/></svg>");
     background-repeat: no-repeat;
-    background-size: 3rem;
+    background-size: 1.5rem;
     background-position: center;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    animation: spin 0.3s linear infinite;
     z-index: 1;
   }
 
@@ -123,26 +123,26 @@ code {
   }
 }
 
-// Animations
-@keyframes zoom-out {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+// decrease bootstrap spinner aniamtion duration
+.spinner-border {
+  animation-duration: 0.3s;
 }
 
+.movie-card::after,
+.spin {
+  animation: spin 0.3s linear infinite;
+}
+
+// Animations
 @keyframes spin {
   0% {
     // opacity: 0.9;
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(0.8);
   }
 
   100% {
     // opacity: 1;
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1);
   }
 }
 

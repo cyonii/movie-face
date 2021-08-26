@@ -1,28 +1,21 @@
 import PropTypes from 'prop-types';
 
 const Loading = (props) => {
-  const { variant } = props;
-  let spinnerClass = 'spinner-border';
-
-  if (variant.length > 0) {
-    spinnerClass += ` spinner-border-${variant}`;
-  }
+  const { size } = props;
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center mt-5" data-testid="loading">
-      <div className={spinnerClass} role="status">
-        <span className="visually-hidden sr-only">Loading...</span>
-      </div>
+      <i className="bi bi-lightning-charge text-secondary spin" style={{ fontSize: size }} />
     </div>
   );
 };
 
 Loading.propTypes = {
-  variant: PropTypes.string,
+  size: PropTypes.string,
 };
 
 Loading.defaultProps = {
-  variant: '',
+  size: '1.5rem',
 };
 
 export default Loading;
