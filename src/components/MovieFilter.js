@@ -27,7 +27,7 @@ const MovieFilter = () => {
         <span className="d-none d-lg-inline me-2">Showing</span>
         <Form.Select
           onChange={handleChange}
-          className="form-control form-select rounded-0"
+          className="form-control form-select border-0 rounded-0"
           id="filter"
           aria-label="'Showing' filter form"
         >
