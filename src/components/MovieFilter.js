@@ -22,17 +22,19 @@ const MovieFilter = () => {
   };
 
   return (
-    <Form.Label className="d-flex align-items-center form-label mb-0" htmlFor="movie-filter">
-      <span className="d-none d-lg-inline me-2">Showing</span>
-      <Form.Select
-        onChange={handleChange}
-        className="form-control form-select rounded-0"
-        id="movie-filter"
-        aria-label="'Showing' filter form"
-      >
-        {filterOptions}
-      </Form.Select>
-    </Form.Label>
+    <Form data-testid="filter-form">
+      <Form.Label className="form-label d-flex align-items-center mb-0" htmlFor="filter">
+        <span className="d-none d-lg-inline me-2">Showing</span>
+        <Form.Select
+          onChange={handleChange}
+          className="form-control form-select rounded-0"
+          id="filter"
+          aria-label="'Showing' filter form"
+        >
+          {filterOptions}
+        </Form.Select>
+      </Form.Label>
+    </Form>
   );
 };
 
