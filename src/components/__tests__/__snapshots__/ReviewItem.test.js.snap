@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewItem should render correctly 1`] = `
+<div>
+  <div
+    class="px-0 bg-transparent text-white border-0 border-bottom border-secondary list-group-item"
+  >
+    <h6
+      class="text-info mb-0 lh-1"
+    >
+      Cat Ellington
+    </h6>
+    <div
+      class="d-flex justify-content-between align-items-center mb-3"
+    >
+      <small
+        class="text-muted"
+      >
+        Rating: null
+      </small>
+    </div>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      (As I'm writing this review, Darth Vader's theme music begins to build in my mind...)
+    </p>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      
+    </p>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      Well, it actually has a title, what the Darth Vader theme. And that title is "The Imperial March", composed by the great John Williams, whom, as many of you may 
+      ...
+      <br />
+      <button
+        class="lh-1 border-0 p-0 btn btn-link"
+        type="button"
+      >
+        <small>
+          Show more
+        </small>
+      </button>
+    </p>
+  </div>
+</div>
+`;
