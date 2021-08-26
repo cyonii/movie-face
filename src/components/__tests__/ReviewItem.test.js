@@ -7,8 +7,9 @@ describe('ReviewItem', () => {
 
   it('should render correctly', () => {
     const review = reviews[0];
-    render(<ReviewItem review={review} />);
+    const tree = render(<ReviewItem review={review} />);
 
+    expect(tree.container).toMatchSnapshot();
     expect(screen.getByText(review.author)).toBeInTheDocument();
     expect(screen.getByText(`Rating: ${review.author_details.rating}`)).toBeInTheDocument();
   });
