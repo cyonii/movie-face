@@ -5,14 +5,15 @@ import Card from 'react-bootstrap/Card';
 
 const MovieColumn = (props) => {
   const { movie } = props;
-  const assetsUrl = 'https://image.tmdb.org/t/p/w780';
+  const assetUrl = 'https://image.tmdb.org/t/p/w780';
+  const posterUrl = `${assetUrl}${movie.poster_path}`;
 
   return (
     <Col xs={6} sm={4} md={3} data-testid="movie-column">
       <Card className="movie-card bg-dark h-100 rounded-0 border-0">
         {/* Use placeholder if movie poster is unavailable */}
         { movie.poster_path
-          ? <Card.Img className="rounded-0 bg-dark" src={`${assetsUrl}/${movie.poster_path}`} alt={movie.title} loading="lazy" />
+          ? <Card.Img className="rounded-0 bg-dark" src={posterUrl} alt={movie.title} loading="lazy" />
           : (
             <div className="movie-card-placeholder">
               <h6 className="text-light opacity-75">{movie.title}</h6>
@@ -27,10 +28,7 @@ const MovieColumn = (props) => {
           <Card.Title className="fs-6 fw-bold">{movie.title}</Card.Title>
           <Card.Text>
             <span className="text-muted">Rating:&nbsp;&nbsp;</span>
-            <b>
-              {movie.vote_average}
-              &nbsp;/ 10
-            </b>
+            <b>{`${movie.vote_average} / 10`}</b>
           </Card.Text>
           <Link to={`/movie/${movie.id}`} className="btn btn-success border-success border-2 fw-bold">Movie Info</Link>
         </Card.Body>
