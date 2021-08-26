@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading should render correctly 1`] = `
+<div
+  class="d-flex flex-column justify-content-center align-items-center mt-5"
+  data-testid="loading"
+>
+  <div
+    class="spinner-border"
+    role="status"
+  >
+    <span
+      class="visually-hidden sr-only"
+    >
+      Loading...
+    </span>
+  </div>
+</div>
+`;
