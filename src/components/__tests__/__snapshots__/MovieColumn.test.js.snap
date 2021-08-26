@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieColumn renders without crashing 1`] = `
+<div
+  class="col-md-3 col-sm-4 col-6"
+  data-testid="movie-column"
+>
+  <div
+    class="movie-card bg-dark h-100 rounded-0 border-0 card"
+  >
+    <img
+      alt="Jason Bourne"
+      class="card-img rounded-0 bg-dark"
+      loading="lazy"
+      src="https://image.tmdb.org/t/p/w780//lFSSLTlFozwpaGlO31OoUeirBgQ.jpg"
+    />
+    <div
+      class="text-white opacity-100 card-body"
+    >
+      <img
+        class="card-img card-img mb-2"
+        src="https://image.tmdb.org/t/p/w780//AoT2YrJUJlg5vKE3iMOLvHlTd3m.jpg"
+      />
+      <div
+        class="fs-6 fw-bold card-title h5"
+      >
+        Jason Bourne
+      </div>
+      <p
+        class="card-text"
+      >
+        <span
+          class="text-muted"
+        >
+          Rating:  
+        </span>
+        <b>
+          5.25
+           / 10
+        </b>
+      </p>
+      <a
+        class="btn btn-success border-success border-2 fw-bold"
+        href="/movie/324668"
+      >
+        Movie Info
+      </a>
+    </div>
+  </div>
+</div>
+`;

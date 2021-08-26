@@ -8,7 +8,7 @@ const MovieColumn = (props) => {
   const assetsUrl = 'https://image.tmdb.org/t/p/w780';
 
   return (
-    <Col xs={6} sm={4} md={3}>
+    <Col xs={6} sm={4} md={3} data-testid="movie-column">
       <Card className="movie-card bg-dark h-100 rounded-0 border-0">
         {/* Use placeholder if movie poster is unavailable */}
         { movie.poster_path
