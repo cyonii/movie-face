@@ -4,6 +4,7 @@ exports[`ReviewItem should render correctly 1`] = `
 <div>
   <div
     class="px-0 bg-transparent text-white border-0 border-bottom border-secondary list-group-item"
+    data-testid="review-item"
   >
     <h6
       class="text-info mb-0 lh-1"
@@ -33,17 +34,27 @@ exports[`ReviewItem should render correctly 1`] = `
       class="mb-2 opacity-75 review-text"
     >
       Well, it actually has a title, what the Darth Vader theme. And that title is "The Imperial March", composed by the great John Williams, whom, as many of you may 
-      ...
-      <br />
+      <span
+        class="text-muted fw-bold"
+      >
+        ...
+      </span>
+    </p>
+    <div
+      class="d-flex mt-1 opacity-100"
+    >
       <button
-        class="lh-1 border-0 p-0 btn btn-link"
+        class="lh-1 py-0 pb-1 rounded-0 text-decoration-none btn btn-info"
         type="button"
       >
-        <small>
+        <small
+          class="fw-bold"
+          style="font-size: 13px;"
+        >
           Show more
         </small>
       </button>
-    </p>
+    </div>
   </div>
 </div>
 `;
