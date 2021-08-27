@@ -10,6 +10,7 @@ import { setTotalPages, increasePage, decreasePage } from '../redux/actions/meta
 import MovieColumn from '../components/MovieColumn';
 import { fetchMoviesByFilter } from '../api/movies';
 import Loading from '../components/Loading';
+import Movies404 from '../components/Movie404';
 
 const MoviesRow = ((props) => {
   const [loading, setLoading] = useState(true);
@@ -49,7 +50,7 @@ const MoviesRow = ((props) => {
 
   if (loading) return <Loading />;
 
-  if (movies.length < 1) return <h2 className="mt-5 text-center">No movies found!</h2>;
+  if (movies.length < 1) return <Movies404 />;
 
   return (
     <Row className="g-1">

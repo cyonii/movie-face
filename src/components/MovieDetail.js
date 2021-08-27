@@ -5,22 +5,33 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MovieReviews from './MovieReviews';
 import Loading from './Loading';
+import Movie404 from './Movie404';
 import { moviedb } from '../api/movies';
 
 const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(async () => {
+    setLoading(true);
+    setNotFound(false);
     await moviedb.movieInfo(id)
-      .then((data) => setMovie(data))
-      .catch((err) => err);
+      .then((data) => {
+        setMovie(data);
+      })
+      .catch((err) => {
+        if (err.response.status === 404) setNotFound(true);
+      });
+    setLoading(false);
   }, []);
 
   // Return loading indicator if movie data is not fetched
-  if (movie.id === undefined) {
-    return (<Loading />);
-  }
+  if (loading) return (<Loading />);
+
+  // Return 404 if movie not found
+  if (notFound) return (<Movie404 />);
 
   const makeBadge = (text) => <div className="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2" key={text}>{text}</div>;
   const makeAttrColumn = (colClass, text, value) => (
@@ -33,7 +44,7 @@ const MovieDetail = () => {
   );
 
   return (
-    <Container className="mt-5 text-white mb-5">
+    <Container className="mt-5 text-white mb-5" data-testid="movie-detail">
       <Row>
         <Col md={5} lg={4}>
           <img className="img-fluid" id="poster" src={`https://image.tmdb.org/t/p/w780/${movie.poster_path}`} alt={movie.title} />
