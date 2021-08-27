@@ -2,7 +2,7 @@
 
 exports[`ReviewItem should render correctly 1`] = `
 <div>
-  <div
+  <li
     class="px-0 bg-transparent text-white border-0 border-bottom border-secondary list-group-item"
     data-testid="review-item"
   >
@@ -55,6 +55,6 @@ exports[`ReviewItem should render correctly 1`] = `
         </small>
       </button>
     </div>
-  </div>
+  </li>
 </div>
 `;

@@ -2,6 +2,8 @@ import { render, screen, cleanup } from '@testing-library/react';
 import ReviewItem from '../ReviewItem';
 import reviews from './data/reviews.json';
 
+window.HTMLElement.prototype.scrollIntoView = jest.fn();
+
 describe('ReviewItem', () => {
   afterEach(cleanup);
 
