@@ -6,18 +6,8 @@ $dark: #000;
 
 body {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Roboto",
-    "Oxygen",
-    "Ubuntu",
-    "Cantarell",
-    "Fira Sans",
-    "Droid Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $dark;
@@ -146,13 +136,11 @@ code {
 // Animations
 @keyframes spin {
   0% {
-    opacity: 0;
     transform: rotate(0deg) scale(0.8);
     color: $dark;
   }
 
   100% {
-    opacity: 1;
     transform: rotate(360deg) scale(1);
     color: $light;
   }
