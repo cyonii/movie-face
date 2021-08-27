@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieReviews should render Loading component while fetching reviews 1`] = `
+<div
+  class="d-flex flex-column justify-content-center align-items-center mt-5"
+  data-testid="loading"
+>
+  <i
+    class="bi bi-lightning-charge text-secondary spin"
+    style="font-size: 1rem;"
+  />
+</div>
+`;
+
+exports[`MovieReviews should render review list items 1`] = `
+<ul
+  class="list-group list-group-flush"
+  data-testid="review-list"
+>
+  <li
+    class="px-0 bg-transparent text-white border-0 border-bottom border-secondary list-group-item"
+    data-testid="review-item"
+  >
+    <h6
+      class="text-info mb-0 lh-1"
+    >
+      Cat Ellington
+    </h6>
+    <div
+      class="d-flex justify-content-between align-items-center mb-3"
+    >
+      <small
+        class="text-muted"
+      >
+        Rating: null
+      </small>
+    </div>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      (As I'm writing this review, Darth Vader's theme music begins to build in my mind...)
+    </p>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      
+    </p>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      Well, it actually has a title, what the Darth Vader theme. And that title is "The Imperial March", composed by the great John Williams, whom, as many of you may 
+      <span
+        class="text-muted fw-bold"
+      >
+        ...
+      </span>
+    </p>
+    <div
+      class="d-flex mt-1 opacity-100"
+    >
+      <button
+        class="lh-1 py-0 pb-1 rounded-0 text-decoration-none btn btn-info"
+        type="button"
+      >
+        <small
+          class="fw-bold"
+          style="font-size: 13px;"
+        >
+          Show more
+        </small>
+      </button>
+    </div>
+  </li>
+  <li
+    class="px-0 bg-transparent text-white border-0 border-bottom border-secondary list-group-item"
+    data-testid="review-item"
+  >
+    <h6
+      class="text-info mb-0 lh-1"
+    >
+      John Chard
+    </h6>
+    <div
+      class="d-flex justify-content-between align-items-center mb-3"
+    >
+      <small
+        class="text-muted"
+      >
+        Rating: 10
+      </small>
+    </div>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      A long time ago in a childhood not too far away...
+    </p>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      
+    </p>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      Princess Leia is captured and held hostage by the Imperial Army as it seeks to rule the Galactic Empire. An old Jedi Knight by the name of Ben "Obi-Wan" Kenobi may just be hers, and the rebels onl
+      <span
+        class="text-muted fw-bold"
+      >
+        ...
+      </span>
+    </p>
+    <div
+      class="d-flex mt-1 opacity-100"
+    >
+      <button
+        class="lh-1 py-0 pb-1 rounded-0 text-decoration-none btn btn-info"
+        type="button"
+      >
+        <small
+          class="fw-bold"
+          style="font-size: 13px;"
+        >
+          Show more
+        </small>
+      </button>
+    </div>
+  </li>
+  <li
+    class="px-0 bg-transparent text-white border-0 border-bottom border-secondary list-group-item"
+    data-testid="review-item"
+  >
+    <h6
+      class="text-info mb-0 lh-1"
+    >
+      gastyny
+    </h6>
+    <div
+      class="d-flex justify-content-between align-items-center mb-3"
+    >
+      <small
+        class="text-muted"
+      >
+        Rating: 10
+      </small>
+    </div>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      Star Wars (1977) is a true masterpiece of cinema, and is 
+    </p>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+        definitely one of the best films ever made.
+    </p>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      
+    </p>
+    <p
+      class="mb-2 opacity-75 review-text"
+    >
+      For me Star Wars (1977) is the best movie of all time,tied with The Lord of the Rings trilogy. Star Wars (1977) it is for sure the most iconic
+      <span
+        class="text-muted fw-bold"
+      >
+        ...
+      </span>
+    </p>
+    <div
+      class="d-flex mt-1 opacity-100"
+    >
+      <button
+        class="lh-1 py-0 pb-1 rounded-0 text-decoration-none btn btn-info"
+        type="button"
+      >
+        <small
+          class="fw-bold"
+          style="font-size: 13px;"
+        >
+          Show more
+        </small>
+      </button>
+    </div>
+  </li>
+</ul>
+`;
