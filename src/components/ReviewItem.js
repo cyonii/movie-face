@@ -30,6 +30,8 @@ const ReviewItem = ({ review }) => {
           { (!showAll && index === splittedContent.length - 1 && content.length > sliceLength) && <span className="text-muted fw-bold">...</span> }
         </p>
       ))}
+      { content.length > sliceLength
+      && (
       <div className="d-flex mt-1 opacity-100">
         <Button variant="info" className="lh-1 py-0 pb-1 rounded-0 text-decoration-none" onClick={toggleCollapse}>
           <small className="fw-bold" style={{ fontSize: '13px' }}>
@@ -37,6 +39,7 @@ const ReviewItem = ({ review }) => {
           </small>
         </Button>
       </div>
+      ) }
     </ListGroup.Item>
   );
 };
