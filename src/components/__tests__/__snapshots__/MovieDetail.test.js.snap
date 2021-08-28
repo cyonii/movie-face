@@ -1,0 +1,852 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetail should render Loading component while fetching movie 1`] = `
+<div
+  class="d-flex flex-column justify-content-center align-items-center mt-5"
+  data-testid="loading"
+>
+  <i
+    class="bi bi-lightning-charge text-secondary spin"
+    style="font-size: 1.5rem;"
+  />
+</div>
+`;
+
+exports[`MovieDetail should render review list items 1`] = `
+<div
+  class="mt-5 text-white mb-5 container"
+  data-testid="movie-detail"
+>
+  <div
+    class="row"
+  >
+    <div
+      class="col-lg-4 col-md-5"
+    >
+      <img
+        alt="Fight Club"
+        class="img-fluid"
+        id="poster"
+        src="https://image.tmdb.org/t/p/w780/null"
+      />
+    </div>
+    <div
+      class="col"
+    >
+      <h1
+        class="text-secondarys lh-1 mb-0"
+      >
+        <b>
+          Fight Club
+        </b>
+      </h1>
+      <a
+        class="text-secondary fw-light"
+        href=""
+        rel="noreferrer"
+        target="_blank"
+      >
+        <small />
+      </a>
+      <p
+        class="lh-sm text-info mt-4"
+      >
+        A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground "fight clubs" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.
+      </p>
+      <div
+        class="row"
+      >
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              STATUS:
+            </small>
+            <b>
+              Released
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              RELEASE DATE:
+            </small>
+            <b>
+              1999-10-12
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              RUNTIME:
+            </small>
+            <b>
+              139 Minutes
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              RATING:
+            </small>
+            <b>
+              7.8 / 10
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              VOTE COUNT:
+            </small>
+            <b>
+              3439
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              POPULARITY:
+            </small>
+            <b>
+              0.5%
+            </b>
+          </div>
+        </div>
+        <div
+          class="row"
+        >
+          <div
+            class="col-12 col-md-6 col"
+          >
+            <div
+              class="mb-3"
+            >
+              <small
+                class="d-block text-muted fw-bold"
+              >
+                GENRES:
+              </small>
+              <div
+                class="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2"
+              >
+                Drama
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 col"
+          >
+            <div
+              class="mb-3"
+            >
+              <small
+                class="d-block text-muted fw-bold"
+              >
+                SPOKEN LANGUAGES:
+              </small>
+              <div
+                class="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2"
+              >
+                English
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr
+    class="mb-5"
+  />
+  <div
+    class="align-items-center row-type-1 overflow-hidden row"
+  >
+    <div
+      class="overflow-hidden overflow-y-auto h-100 mt-3 mt-md-0 pb-3 col"
+    >
+      <h5
+        class="sticky-top bg-dark py-2 text-decoration-underline border-secondary"
+      >
+        Reviews
+      </h5>
+      <ul
+        class="list-group list-group-flush"
+        data-testid="review-list"
+      >
+        <h2
+          class="my-auto opacity-25 fw-bold mb-0 lh-1"
+        >
+          No reviews yet.
+        </h2>
+      </ul>
+    </div>
+    <div
+      class="order-first order-md-last text-center col-md-5"
+    >
+      <div
+        class="alert alert-info border-0 border-bottom border-2 border-info rounded-0 py-2 mb-0 lh-1"
+      >
+        How much can you know about yourself if you've never been in a fight?
+      </div>
+      <img
+        alt="Fight Club"
+        class="img-fluid"
+        src="https://image.tmdb.org/t/p/w780//fCayJrkfRaCRCTh8GqN30f8oyQF.jpg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MovieDetail should render review list items 2`] = `
+<div
+  class="mt-5 text-white mb-5 container"
+  data-testid="movie-detail"
+>
+  <div
+    class="row"
+  >
+    <div
+      class="col-lg-4 col-md-5"
+    >
+      <img
+        alt="Fight Club"
+        class="img-fluid"
+        id="poster"
+        src="https://image.tmdb.org/t/p/w780/null"
+      />
+    </div>
+    <div
+      class="col"
+    >
+      <h1
+        class="text-secondarys lh-1 mb-0"
+      >
+        <b>
+          Fight Club
+        </b>
+      </h1>
+      <a
+        class="text-secondary fw-light"
+        href=""
+        rel="noreferrer"
+        target="_blank"
+      >
+        <small />
+      </a>
+      <p
+        class="lh-sm text-info mt-4"
+      >
+        A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground "fight clubs" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.
+      </p>
+      <div
+        class="row"
+      >
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              STATUS:
+            </small>
+            <b>
+              Released
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              RELEASE DATE:
+            </small>
+            <b>
+              1999-10-12
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              RUNTIME:
+            </small>
+            <b>
+              139 Minutes
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              RATING:
+            </small>
+            <b>
+              7.8 / 10
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              VOTE COUNT:
+            </small>
+            <b>
+              3439
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              POPULARITY:
+            </small>
+            <b>
+              0.5%
+            </b>
+          </div>
+        </div>
+        <div
+          class="row"
+        >
+          <div
+            class="col-12 col-md-6 col"
+          >
+            <div
+              class="mb-3"
+            >
+              <small
+                class="d-block text-muted fw-bold"
+              >
+                GENRES:
+              </small>
+              <div
+                class="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2"
+              >
+                Drama
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 col"
+          >
+            <div
+              class="mb-3"
+            >
+              <small
+                class="d-block text-muted fw-bold"
+              >
+                SPOKEN LANGUAGES:
+              </small>
+              <div
+                class="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2"
+              >
+                English
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr
+    class="mb-5"
+  />
+  <div
+    class="align-items-center row-type-1 overflow-hidden row"
+  >
+    <div
+      class="overflow-hidden overflow-y-auto h-100 mt-3 mt-md-0 pb-3 col"
+    >
+      <h5
+        class="sticky-top bg-dark py-2 text-decoration-underline border-secondary"
+      >
+        Reviews
+      </h5>
+      <div
+        class="d-flex flex-column justify-content-center align-items-center mt-5"
+        data-testid="loading"
+      >
+        <i
+          class="bi bi-lightning-charge text-secondary spin"
+          style="font-size: 1rem;"
+        />
+      </div>
+    </div>
+    <div
+      class="order-first order-md-last text-center col-md-5"
+    >
+      <div
+        class="alert alert-info border-0 border-bottom border-2 border-info rounded-0 py-2 mb-0 lh-1"
+      >
+        How much can you know about yourself if you've never been in a fight?
+      </div>
+      <img
+        alt="Fight Club"
+        class="img-fluid"
+        src="https://image.tmdb.org/t/p/w780//fCayJrkfRaCRCTh8GqN30f8oyQF.jpg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MovieDetail should render review list items 3`] = `
+<div
+  class="mt-5 text-white mb-5 container"
+  data-testid="movie-detail"
+>
+  <div
+    class="row"
+  >
+    <div
+      class="col-lg-4 col-md-5"
+    >
+      <img
+        alt="Fight Club"
+        class="img-fluid"
+        id="poster"
+        src="https://image.tmdb.org/t/p/w780/null"
+      />
+    </div>
+    <div
+      class="col"
+    >
+      <h1
+        class="text-secondarys lh-1 mb-0"
+      >
+        <b>
+          Fight Club
+        </b>
+      </h1>
+      <a
+        class="text-secondary fw-light"
+        href=""
+        rel="noreferrer"
+        target="_blank"
+      >
+        <small />
+      </a>
+      <p
+        class="lh-sm text-info mt-4"
+      >
+        A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground "fight clubs" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.
+      </p>
+      <div
+        class="row"
+      >
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              STATUS:
+            </small>
+            <b>
+              Released
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              RELEASE DATE:
+            </small>
+            <b>
+              1999-10-12
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              RUNTIME:
+            </small>
+            <b>
+              139 Minutes
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              RATING:
+            </small>
+            <b>
+              7.8 / 10
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              VOTE COUNT:
+            </small>
+            <b>
+              3439
+            </b>
+          </div>
+        </div>
+        <div
+          class="col-6 col-lg-4 col"
+        >
+          <div
+            class="mb-3"
+          >
+            <small
+              class="d-block text-muted fw-bold"
+            >
+              POPULARITY:
+            </small>
+            <b>
+              0.5%
+            </b>
+          </div>
+        </div>
+        <div
+          class="row"
+        >
+          <div
+            class="col-12 col-md-6 col"
+          >
+            <div
+              class="mb-3"
+            >
+              <small
+                class="d-block text-muted fw-bold"
+              >
+                GENRES:
+              </small>
+              <div
+                class="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2"
+              >
+                Drama
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 col"
+          >
+            <div
+              class="mb-3"
+            >
+              <small
+                class="d-block text-muted fw-bold"
+              >
+                SPOKEN LANGUAGES:
+              </small>
+              <div
+                class="badge bg-secondary lh-1 py-2 px-3 me-2 mb-2"
+              >
+                English
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr
+    class="mb-5"
+  />
+  <div
+    class="align-items-center row-type-1 overflow-hidden row"
+  >
+    <div
+      class="overflow-hidden overflow-y-auto h-100 mt-3 mt-md-0 pb-3 col"
+    >
+      <h5
+        class="sticky-top bg-dark py-2 text-decoration-underline border-secondary"
+      >
+        Reviews
+      </h5>
+      <ul
+        class="list-group list-group-flush"
+        data-testid="review-list"
+      >
+        <li
+          class="px-0 bg-transparent text-white border-0 border-bottom border-secondary list-group-item"
+          data-testid="review-item"
+        >
+          <h6
+            class="text-info mb-0 lh-1"
+          >
+            Cat Ellington
+          </h6>
+          <div
+            class="d-flex justify-content-between align-items-center mb-3"
+          >
+            <small
+              class="text-muted"
+            >
+              Rating: null
+            </small>
+          </div>
+          <p
+            class="mb-2 opacity-75 review-text"
+          >
+            (As I'm writing this review, Darth Vader's theme music begins to build in my mind...)
+          </p>
+          <p
+            class="mb-2 opacity-75 review-text"
+          >
+            
+          </p>
+          <p
+            class="mb-2 opacity-75 review-text"
+          >
+            Well, it actually has a title, what the Darth Vader theme. And that title is "The Imperial March", composed by the great John Williams, whom, as many of you may 
+            <span
+              class="text-muted fw-bold"
+            >
+              ...
+            </span>
+          </p>
+          <div
+            class="d-flex mt-1 opacity-100"
+          >
+            <button
+              class="lh-1 py-0 pb-1 rounded-0 text-decoration-none btn btn-info"
+              type="button"
+            >
+              <small
+                class="fw-bold"
+                style="font-size: 13px;"
+              >
+                Show more
+              </small>
+            </button>
+          </div>
+        </li>
+        <li
+          class="px-0 bg-transparent text-white border-0 border-bottom border-secondary list-group-item"
+          data-testid="review-item"
+        >
+          <h6
+            class="text-info mb-0 lh-1"
+          >
+            John Chard
+          </h6>
+          <div
+            class="d-flex justify-content-between align-items-center mb-3"
+          >
+            <small
+              class="text-muted"
+            >
+              Rating: 10
+            </small>
+          </div>
+          <p
+            class="mb-2 opacity-75 review-text"
+          >
+            A long time ago in a childhood not too far away...
+          </p>
+          <p
+            class="mb-2 opacity-75 review-text"
+          >
+            
+          </p>
+          <p
+            class="mb-2 opacity-75 review-text"
+          >
+            Princess Leia is captured and held hostage by the Imperial Army as it seeks to rule the Galactic Empire. An old Jedi Knight by the name of Ben "Obi-Wan" Kenobi may just be hers, and the rebels onl
+            <span
+              class="text-muted fw-bold"
+            >
+              ...
+            </span>
+          </p>
+          <div
+            class="d-flex mt-1 opacity-100"
+          >
+            <button
+              class="lh-1 py-0 pb-1 rounded-0 text-decoration-none btn btn-info"
+              type="button"
+            >
+              <small
+                class="fw-bold"
+                style="font-size: 13px;"
+              >
+                Show more
+              </small>
+            </button>
+          </div>
+        </li>
+        <li
+          class="px-0 bg-transparent text-white border-0 border-bottom border-secondary list-group-item"
+          data-testid="review-item"
+        >
+          <h6
+            class="text-info mb-0 lh-1"
+          >
+            gastyny
+          </h6>
+          <div
+            class="d-flex justify-content-between align-items-center mb-3"
+          >
+            <small
+              class="text-muted"
+            >
+              Rating: 10
+            </small>
+          </div>
+          <p
+            class="mb-2 opacity-75 review-text"
+          >
+            Star Wars (1977) is a true masterpiece of cinema, and is 
+          </p>
+          <p
+            class="mb-2 opacity-75 review-text"
+          >
+              definitely one of the best films ever made.
+          </p>
+          <p
+            class="mb-2 opacity-75 review-text"
+          >
+            
+          </p>
+          <p
+            class="mb-2 opacity-75 review-text"
+          >
+            For me Star Wars (1977) is the best movie of all time,tied with The Lord of the Rings trilogy. Star Wars (1977) it is for sure the most iconic
+            <span
+              class="text-muted fw-bold"
+            >
+              ...
+            </span>
+          </p>
+          <div
+            class="d-flex mt-1 opacity-100"
+          >
+            <button
+              class="lh-1 py-0 pb-1 rounded-0 text-decoration-none btn btn-info"
+              type="button"
+            >
+              <small
+                class="fw-bold"
+                style="font-size: 13px;"
+              >
+                Show more
+              </small>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="order-first order-md-last text-center col-md-5"
+    >
+      <div
+        class="alert alert-info border-0 border-bottom border-2 border-info rounded-0 py-2 mb-0 lh-1"
+      >
+        How much can you know about yourself if you've never been in a fight?
+      </div>
+      <img
+        alt="Fight Club"
+        class="img-fluid"
+        src="https://image.tmdb.org/t/p/w780//fCayJrkfRaCRCTh8GqN30f8oyQF.jpg"
+      />
+    </div>
+  </div>
+</div>
+`;

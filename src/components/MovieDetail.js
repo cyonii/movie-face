@@ -4,8 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MovieReviews from './MovieReviews';
-import Loading from './Loading';
-import Movie404 from './Movie404';
+import Loading from './widgets/Loading';
+import Movie404 from './widgets/Movie404';
 import { moviedb } from '../api/movies';
 
 const MovieDetail = () => {
@@ -18,9 +18,7 @@ const MovieDetail = () => {
     setLoading(true);
     setNotFound(false);
     await moviedb.movieInfo(id)
-      .then((data) => {
-        setMovie(data);
-      })
+      .then((data) => setMovie(data))
       .catch((err) => {
         if (err.response.status === 404) setNotFound(true);
       });
