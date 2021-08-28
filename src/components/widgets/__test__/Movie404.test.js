@@ -7,6 +7,7 @@ describe('Movie404', () => {
   it('should render correctly', async () => {
     render(<Movie404 />);
 
+    expect(screen.getByTestId('movie-404')).toMatchSnapshot();
     expect(screen.getByTestId('movie-404')).toBeInTheDocument();
     expect(screen.getByText('404')).toBeInTheDocument();
     expect(screen.getByText('404')).toHaveClass('text-danger');
