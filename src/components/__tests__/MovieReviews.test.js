@@ -9,7 +9,7 @@ const mockReviews = reviewData;
 // mock moviedb.movieReviews api calls
 jest.mock('../../api/movies', () => ({
   moviedb: {
-    movieReviews: () => Promise.resolve({ results: mockReviews }),
+    movieReviews: () => Promise.resolve(mockReviews),
   },
 }));
 

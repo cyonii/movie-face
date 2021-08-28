@@ -5,15 +5,9 @@ exports[`Loading should render correctly 1`] = `
   class="d-flex flex-column justify-content-center align-items-center mt-5"
   data-testid="loading"
 >
-  <div
-    class="spinner-border"
-    role="status"
-  >
-    <span
-      class="visually-hidden sr-only"
-    >
-      Loading...
-    </span>
-  </div>
+  <i
+    class="bi bi-lightning-charge text-secondary spin"
+    style="font-size: 1.5rem;"
+  />
 </div>
 `;

@@ -9,22 +9,22 @@ exports[`MovieColumn renders without crashing 1`] = `
     class="movie-card bg-dark h-100 rounded-0 border-0 card"
   >
     <img
-      alt="Jason Bourne"
+      alt="Deadpool 2"
       class="card-img rounded-0 bg-dark"
       loading="lazy"
-      src="https://image.tmdb.org/t/p/w780//lFSSLTlFozwpaGlO31OoUeirBgQ.jpg"
+      src="https://image.tmdb.org/t/p/w780/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg"
     />
     <div
       class="text-white opacity-100 card-body"
     >
       <img
         class="card-img card-img mb-2"
-        src="https://image.tmdb.org/t/p/w780//AoT2YrJUJlg5vKE3iMOLvHlTd3m.jpg"
+        src="https://image.tmdb.org/t/p/w780//3P52oz9HPQWxcwHOwxtyrVV1LKi.jpg"
       />
       <div
         class="fs-6 fw-bold card-title h5"
       >
-        Jason Bourne
+        Deadpool 2
       </div>
       <p
         class="card-text"
@@ -35,13 +35,12 @@ exports[`MovieColumn renders without crashing 1`] = `
           Rating:  
         </span>
         <b>
-          5.25
-           / 10
+          7.6 / 10
         </b>
       </p>
       <a
         class="btn btn-success border-success border-2 fw-bold"
-        href="/movie/324668"
+        href="/movie/383498"
       >
         Movie Info
       </a>

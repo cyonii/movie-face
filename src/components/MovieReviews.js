@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { moviedb } from '../api/movies';
 import ReviewItem from './ReviewItem';
-import Loading from './Loading';
+import Loading from './widgets/Loading';
 
 const MovieReviews = (props) => {
   const { movieID } = props;

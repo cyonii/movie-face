@@ -5,7 +5,7 @@ import movies from './data/movies.json';
 
 describe('MovieColumn', () => {
   it('renders without crashing', async () => {
-    const movie = movies[Math.floor(Math.random() * movies.length)];
+    const movie = movies.results[1];
 
     const el = (
       <BrowserRouter>

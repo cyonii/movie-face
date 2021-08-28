@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Col from 'react-bootstrap/Col';
 
 const Movies404 = ({ text }) => (
-  <Col className="text-center mt-5">
+  <Col className="text-center mt-5" data-testid="movie-404">
     <h1 className="fs-3">
       <span className="text-danger fw-bold">404</span>
       <span>{ `${text} | not found` }</span>

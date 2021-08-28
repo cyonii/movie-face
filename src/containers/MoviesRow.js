@@ -9,8 +9,8 @@ import { addMovies } from '../redux/actions/movies';
 import { setTotalPages, increasePage, decreasePage } from '../redux/actions/metaData';
 import MovieColumn from '../components/MovieColumn';
 import { fetchMoviesByFilter } from '../api/movies';
-import Loading from '../components/Loading';
-import Movies404 from '../components/Movie404';
+import Loading from '../components/widgets/Loading';
+import Movies404 from '../components/widgets/Movie404';
 
 const MoviesRow = ((props) => {
   const [loading, setLoading] = useState(true);

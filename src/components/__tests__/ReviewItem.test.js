@@ -8,7 +8,7 @@ describe('ReviewItem', () => {
   afterEach(cleanup);
 
   it('should render correctly', () => {
-    const review = reviews[0];
+    const review = reviews.results[0];
     const { container } = render(<ReviewItem review={review} />);
 
     expect(container).toMatchSnapshot();
@@ -17,21 +17,21 @@ describe('ReviewItem', () => {
   });
 
   it('should render `show more` button when content length > 250', () => {
-    const review = reviews[0];
+    const review = reviews.results[0];
     render(<ReviewItem review={review} />);
 
     expect(screen.getByText('Show more')).toBeInTheDocument();
   });
 
   it('should NOT render `show more` button when content length < 250', () => {
-    const review = reviews[1];
+    const review = reviews.results[1];
     render(<ReviewItem review={{ ...review, content: review.content.slice(0, 200) }} />);
 
     expect(screen.queryByText('Show more')).toBeNull();
   });
 
   it('should toggle between `show less` and `show more` button is clicked', () => {
-    const review = reviews[0];
+    const review = reviews.results[0];
     render(<ReviewItem review={review} />);
 
     screen.getByText('Show more').click();
