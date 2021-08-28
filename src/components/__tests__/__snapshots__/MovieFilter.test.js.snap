@@ -17,7 +17,7 @@ exports[`MovieFilter should render correctly 1`] = `
       </span>
       <select
         aria-label="'Showing' filter form"
-        class="form-control form-select rounded-0 form-select"
+        class="form-control form-select border-0 rounded-0 form-select"
         id="filter"
       >
         <option
