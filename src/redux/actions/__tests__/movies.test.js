@@ -1,4 +1,4 @@
-import { addMovies } from '../../actions/movies';
+import { addMovies } from '../movies';
 
 describe('Movie Actions', () => {
   describe('addMovies', () => {

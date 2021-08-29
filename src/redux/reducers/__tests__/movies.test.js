@@ -1,4 +1,4 @@
-import movieReducer from '../../reducers/movies';
+import movieReducer from '../movies';
 import { addMovies } from '../../actions/movies';
 import movies from './movies.json';
 
