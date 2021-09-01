@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieFilter should render correctly 1`] = `
+<DocumentFragment>
+  <form
+    class=""
+    data-testid="filter-form"
+  >
+    <label
+      class="form-label d-flex align-items-center mb-0 form-label"
+      for="filter"
+    >
+      <span
+        class="d-none d-lg-inline me-2"
+      >
+        Showing
+      </span>
+      <select
+        aria-label="'Showing' filter form"
+        class="form-control form-select border-0 rounded-0 form-select"
+        id="filter"
+      >
+        <option
+          value="popular"
+        >
+          Popular
+        </option>
+        <option
+          value="topRated"
+        >
+          Top Rated
+        </option>
+        <option
+          value="upcoming"
+        >
+          Upcoming
+        </option>
+        <option
+          value="nowPlaying"
+        >
+          Now Playing
+        </option>
+      </select>
+    </label>
+  </form>
+</DocumentFragment>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading should render correctly 1`] = `
+<div
+  class="d-flex flex-column justify-content-center align-items-center mt-5"
+  data-testid="loading"
+>
+  <i
+    class="bi bi-lightning-charge text-secondary spin"
+    style="font-size: 1.5rem;"
+  />
+</div>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie404 should render correctly 1`] = `
+<div
+  class="text-center mt-5 col"
+  data-testid="movie-404"
+>
+  <h1
+    class="fs-3"
+  >
+    <span
+      class="text-danger fw-bold"
+    >
+      404
+    </span>
+    <span>
+       | not found
+    </span>
+  </h1>
+</div>
+`;

@@ -1,0 +1,33 @@
+[
+  {
+    "adult": false,
+    "backdrop_path": "/backdrop.jpg",
+    "genre_ids": [28, 12, 14, 35],
+    "id": 436969,
+    "original_language": "en",
+    "original_title": "The Suicide Squad",
+    "overview": "Supervillains Harley Quinn",
+    "popularity": 4443.559,
+    "poster_path": "/poster.jpg",
+    "release_date": "2021-07-28",
+    "title": "The Suicide Squad",
+    "video": false,
+    "vote_average": 8,
+    "vote_count": 2847
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/poster.jpg",
+    "genre_ids": [12, 14, 35, 28],
+    "id": 451048,
+    "original_language": "en",
+    "original_title": "Movie overview",
+    "popularity": 3712.749,
+    "poster_path": "/poster.jpg",
+    "release_date": "2021-07-28",
+    "title": "Jungle Cruise",
+    "video": false,
+    "vote_average": 7.9,
+    "vote_count": 2017
+  }
+]
