@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MovieReviews from './MovieReviews';
+import MovieCredits from './MovieCredits';
 import Loading from './widgets/Loading';
 import Movie404 from './widgets/Movie404';
 import { moviedb } from '../api/movies';
@@ -69,8 +70,8 @@ const MovieDetail = () => {
         </Col>
       </Row>
 
+      {/* Movie reviews */}
       <hr className="mb-5" />
-
       <Row className="align-items-center row-type-1 overflow-hidden">
         <Col className="overflow-hidden overflow-y-auto h-100 mt-3 mt-md-0 pb-3">
           <MovieReviews movieID={movie.id} />
@@ -80,6 +81,10 @@ const MovieDetail = () => {
           <img className="img-fluid" src={`https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`} alt={movie.title} />
         </Col>
       </Row>
+
+      {/* Credits row */}
+      <hr className="mb-5" />
+      <MovieCredits movieID={movie.id} />
     </Container>
   );
 };
