@@ -5,15 +5,18 @@ import { MemoryRouter } from 'react-router-dom';
 import MovieDetail from '../MovieDetail';
 import singleMovieResponse from './data/singleMovie.json';
 import reviewResponse from './data/reviews.json';
+import movieCreditsResponse from './data/credits.json';
 
 const mockedMovieResponse = singleMovieResponse;
 const mockedReviewResponse = reviewResponse;
+const mockedCreditResponse = movieCreditsResponse;
 
 // mock moviedb api call for movieInfo and movieReviews
 jest.mock('../../api/movies', () => ({
   moviedb: {
     movieInfo: () => Promise.resolve(mockedMovieResponse),
     movieReviews: () => Promise.resolve(mockedReviewResponse),
+    movieCredits: () => Promise.resolve(mockedCreditResponse),
   },
 }));
 

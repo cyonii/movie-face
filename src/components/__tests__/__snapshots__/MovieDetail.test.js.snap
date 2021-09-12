@@ -235,6 +235,20 @@ exports[`MovieDetail should render review list items 1`] = `
       />
     </div>
   </div>
+  <hr
+    class="mb-5"
+  />
+  <div
+    class="g-2 row"
+  >
+    <div
+      class="col-12"
+    >
+      <h5>
+        Credits
+      </h5>
+    </div>
+  </div>
 </div>
 `;
 
@@ -458,6 +472,104 @@ exports[`MovieDetail should render review list items 2`] = `
         class="img-fluid"
         src="https://image.tmdb.org/t/p/w780//fCayJrkfRaCRCTh8GqN30f8oyQF.jpg"
       />
+    </div>
+  </div>
+  <hr
+    class="mb-5"
+  />
+  <div
+    class="g-2 row"
+  >
+    <div
+      class="col-12"
+    >
+      <h5>
+        Credits
+      </h5>
+    </div>
+    <div
+      class="col-lg-2 col-sm-3 col-6"
+    >
+      <div
+        class="bg-dark h-100 text-center card"
+      >
+        <img
+          class="card-img-top"
+          src="https://image.tmdb.org/t/p/w500/5XBzD5WuTyVQZeS4VI25z2moMeY.jpg"
+        />
+        <div
+          class="d-flex flex-column justify-content-end px-0 py-1 card-img-overlay"
+        >
+          <h6
+            class="mb-0 card-title"
+          >
+            Edward Norton
+          </h6>
+          <p
+            class="text-muted card-subtitle"
+          >
+            <small>
+              The Narrator
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-2 col-sm-3 col-6"
+    >
+      <div
+        class="bg-dark h-100 text-center card"
+      >
+        <img
+          class="card-img-top"
+          src="https://image.tmdb.org/t/p/w500/cckcYc2v0yh1tc9QjRelptcOBko.jpg"
+        />
+        <div
+          class="d-flex flex-column justify-content-end px-0 py-1 card-img-overlay"
+        >
+          <h6
+            class="mb-0 card-title"
+          >
+            Brad Pitt
+          </h6>
+          <p
+            class="text-muted card-subtitle"
+          >
+            <small>
+              Tyler Durden
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-2 col-sm-3 col-6"
+    >
+      <div
+        class="bg-dark h-100 text-center card"
+      >
+        <img
+          class="card-img-top"
+          src="https://image.tmdb.org/t/p/w500/mW1NolxQmPE16Zg6zuWyZlFgOwL.jpg"
+        />
+        <div
+          class="d-flex flex-column justify-content-end px-0 py-1 card-img-overlay"
+        >
+          <h6
+            class="mb-0 card-title"
+          >
+            Helena Bonham Carter
+          </h6>
+          <p
+            class="text-muted card-subtitle"
+          >
+            <small>
+              Marla Singer
+            </small>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -846,6 +958,104 @@ exports[`MovieDetail should render review list items 3`] = `
         class="img-fluid"
         src="https://image.tmdb.org/t/p/w780//fCayJrkfRaCRCTh8GqN30f8oyQF.jpg"
       />
+    </div>
+  </div>
+  <hr
+    class="mb-5"
+  />
+  <div
+    class="g-2 row"
+  >
+    <div
+      class="col-12"
+    >
+      <h5>
+        Credits
+      </h5>
+    </div>
+    <div
+      class="col-lg-2 col-sm-3 col-6"
+    >
+      <div
+        class="bg-dark h-100 text-center card"
+      >
+        <img
+          class="card-img-top"
+          src="https://image.tmdb.org/t/p/w500/5XBzD5WuTyVQZeS4VI25z2moMeY.jpg"
+        />
+        <div
+          class="d-flex flex-column justify-content-end px-0 py-1 card-img-overlay"
+        >
+          <h6
+            class="mb-0 card-title"
+          >
+            Edward Norton
+          </h6>
+          <p
+            class="text-muted card-subtitle"
+          >
+            <small>
+              The Narrator
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-2 col-sm-3 col-6"
+    >
+      <div
+        class="bg-dark h-100 text-center card"
+      >
+        <img
+          class="card-img-top"
+          src="https://image.tmdb.org/t/p/w500/cckcYc2v0yh1tc9QjRelptcOBko.jpg"
+        />
+        <div
+          class="d-flex flex-column justify-content-end px-0 py-1 card-img-overlay"
+        >
+          <h6
+            class="mb-0 card-title"
+          >
+            Brad Pitt
+          </h6>
+          <p
+            class="text-muted card-subtitle"
+          >
+            <small>
+              Tyler Durden
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-2 col-sm-3 col-6"
+    >
+      <div
+        class="bg-dark h-100 text-center card"
+      >
+        <img
+          class="card-img-top"
+          src="https://image.tmdb.org/t/p/w500/mW1NolxQmPE16Zg6zuWyZlFgOwL.jpg"
+        />
+        <div
+          class="d-flex flex-column justify-content-end px-0 py-1 card-img-overlay"
+        >
+          <h6
+            class="mb-0 card-title"
+          >
+            Helena Bonham Carter
+          </h6>
+          <p
+            class="text-muted card-subtitle"
+          >
+            <small>
+              Marla Singer
+            </small>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
