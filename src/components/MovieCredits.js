@@ -25,7 +25,7 @@ export default function MovieCredits({ movieID }) {
   return (
     <Row className="g-2">
       <Col xs={12}><h5>Credits</h5></Col>
-      {credits.slice(0, 12).map((credit) => (
+      {credits.map((credit) => (
         <Col key={credit.id} xs={6} sm={3} lg={2}>
           <Card className="bg-dark h-100 text-center">
             { credit.profile_path
