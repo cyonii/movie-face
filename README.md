@@ -2,7 +2,7 @@
 
 # Movie Face
 
-> This project is basically a web UI to browse [The Movie Database (TMDB)](http://developers.themoviedb.org/) API. It has filtering, and search functions that helps to narrow down a query.
+> This project is a web UI to browse [The Movie Database (TMDB)](http://developers.themoviedb.org/). It features filtering, and search functions that helps to narrow down a query.
 
 ![screenshot](./doc/images/screenshot-1.png)
 
