@@ -10,9 +10,11 @@ exports[`SearchForm renders correctly 1`] = `
     class="rounded-0 border-0 form-control"
     placeholder="Movie or show title"
     type="search"
+    value=""
   />
   <button
-    class="rounded-0 no-outline btn btn-success"
+    class="rounded-0 no-outline disabled btn btn-success"
+    disabled=""
     type="submit"
   >
     Search
