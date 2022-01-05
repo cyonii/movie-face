@@ -10,9 +10,10 @@ const SearchForm = () => {
   const history = useHistory();
   const [searchInput, setSearchInput] = useState('');
   const [disabled, setDisabled] = useState(true);
+  const minSearchLength = 3;
 
   useEffect(() => {
-    if (searchInput.length < 2) {
+    if (searchInput.length < minSearchLength) {
       setDisabled(true);
     } else {
       setDisabled(false);
@@ -23,6 +24,9 @@ const SearchForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (searchInput.length < minSearchLength) return;
+
     dispatch(setQuery(searchInput));
     dispatch(setFilter('search'));
     history.push('/');
