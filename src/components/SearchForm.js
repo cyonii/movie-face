@@ -12,8 +12,6 @@ const SearchForm = () => {
   const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
-    dispatch(setQuery(searchInput));
-
     if (searchInput.length < 2) {
       setDisabled(true);
     } else {
