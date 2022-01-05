@@ -19,7 +19,7 @@ const SearchForm = () => {
     }
   }, [searchInput]);
 
-  const handleQueryInput = (e) => setSearchInput(e.target.value);
+  const handleQueryInput = (e) => setSearchInput(e.target.value.trimStart());
 
   const handleSubmit = (e) => {
     e.preventDefault();
