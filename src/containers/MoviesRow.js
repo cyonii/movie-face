@@ -42,7 +42,7 @@ const MoviesRow = ((props) => {
     await handleMoviePromise(response);
 
     setLoading(false);
-  }, [filter, page]);
+  }, [filter, page, query]);
 
   const btnClass = 'rounded-pill px-5 me-1';
   const shouldDisableNext = page === totalPages || totalPages === 0;
