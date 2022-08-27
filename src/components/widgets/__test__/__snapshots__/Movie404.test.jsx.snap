@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Movie404 should render correctly 1`] = `
+exports[`Movie404 > should render correctly 1`] = `
 <div
   class="text-center mt-5 col"
   data-testid="movie-404"

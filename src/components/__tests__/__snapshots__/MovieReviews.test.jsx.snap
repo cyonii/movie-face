@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`MovieReviews should render Loading component while fetching reviews 1`] = `
+exports[`MovieReviews > should render Loading component while fetching reviews 1`] = `
 <div
   class="d-flex flex-column justify-content-center align-items-center mt-5"
   data-testid="loading"
@@ -12,7 +12,7 @@ exports[`MovieReviews should render Loading component while fetching reviews 1`]
 </div>
 `;
 
-exports[`MovieReviews should render review list items 1`] = `
+exports[`MovieReviews > should render review list items 1`] = `
 <ul
   class="list-group list-group-flush"
   data-testid="review-list"

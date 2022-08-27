@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`SearchForm renders correctly 1`] = `
+exports[`SearchForm > renders correctly 1`] = `
 <form
   class="d-flex"
   data-testid="search-form"

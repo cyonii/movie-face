@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`MovieColumn renders without crashing 1`] = `
+exports[`MovieColumn > renders without crashing 1`] = `
 <div
   class="col-md-3 col-sm-4 col-6"
   data-testid="movie-column"

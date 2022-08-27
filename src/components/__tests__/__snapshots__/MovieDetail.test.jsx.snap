@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`MovieDetail should render Loading component while fetching movie 1`] = `
+exports[`MovieDetail > should render Loading component while fetching movie 1`] = `
 <div
   class="d-flex flex-column justify-content-center align-items-center mt-5"
   data-testid="loading"
@@ -12,7 +12,7 @@ exports[`MovieDetail should render Loading component while fetching movie 1`] = 
 </div>
 `;
 
-exports[`MovieDetail should render review list items 1`] = `
+exports[`MovieDetail > should render review list items 1`] = `
 <div
   class="mt-5 text-white mb-5 container"
   data-testid="movie-detail"
@@ -252,7 +252,7 @@ exports[`MovieDetail should render review list items 1`] = `
 </div>
 `;
 
-exports[`MovieDetail should render review list items 2`] = `
+exports[`MovieDetail > should render review list items 2`] = `
 <div
   class="mt-5 text-white mb-5 container"
   data-testid="movie-detail"
@@ -575,7 +575,7 @@ exports[`MovieDetail should render review list items 2`] = `
 </div>
 `;
 
-exports[`MovieDetail should render review list items 3`] = `
+exports[`MovieDetail > should render review list items 3`] = `
 <div
   class="mt-5 text-white mb-5 container"
   data-testid="movie-detail"
