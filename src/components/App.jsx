@@ -1,8 +1,8 @@
-import Container from 'react-bootstrap/Container';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Header from './Header';
-import MovieRow from '../containers/MoviesRow';
-import MovieDetail from './MovieDetail';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Header from "./Header";
+import MovieRow from "../containers/MoviesRow";
+import MovieDetail from "./MovieDetail";
+import Movie404 from "./widgets/Movie404";
 
 function App() {
   return (
@@ -11,11 +11,12 @@ function App() {
 
       <Switch>
         <Route path="/" exact>
-          <Container>
+          <div className="container">
             <MovieRow />
-          </Container>
+          </div>
         </Route>
         <Route path="/movie/:id" exact component={MovieDetail} />
+        <Route path="*" component={Movie404} />
       </Switch>
     </BrowserRouter>
   );

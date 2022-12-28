@@ -1,0 +1,31 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply dark:bg-black;
+  }
+
+  button {
+    transition: all 0.2s ease-in-out;
+    @apply cursor-pointer disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  input,
+  select {
+    @apply py-2 px-3 rounded-none outline-none;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-1 px-3 border border-slate-50 dark:text-slate-50 hover:border-slate-400 hover:text-slate-400;
+  }
+
+  .btn-green-600 {
+    @apply btn bg-green-700 hover:bg-green-600 border-none text-slate-50;
+  }
+}

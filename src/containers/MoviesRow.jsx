@@ -1,18 +1,19 @@
-import { useEffect, useState } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import { addMovies } from '../redux/actions/movies';
-import { setTotalPages, increasePage, decreasePage } from '../redux/actions/metaData';
-import MovieColumn from '../components/MovieColumn';
-import { fetchMoviesByFilter } from '../api/movies';
-import Loading from '../components/widgets/Loading';
-import Movies404 from '../components/widgets/Movie404';
+import { useEffect, useState } from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addMovies } from "../redux/actions/movies";
+import {
+  setTotalPages,
+  increasePage,
+  decreasePage,
+} from "../redux/actions/metaData";
+import MovieCard from "../components/MovieCard";
+import { fetchMoviesByFilter } from "../api/movies";
+import Loading from "../components/widgets/Loading";
+import Movies404 from "../components/widgets/Movie404";
 
-const MoviesRow = ((props) => {
+const MoviesRow = (props) => {
   const [loading, setLoading] = useState(true);
   const {
     movies,
@@ -22,9 +23,7 @@ const MoviesRow = ((props) => {
     increasePage,
     decreasePage,
   } = props;
-  const {
-    filter, query, page, totalPages,
-  } = metaData;
+  const { filter, query, page, totalPages } = metaData;
 
   const handleMoviePromise = async (promise) => {
     await promise
@@ -44,7 +43,6 @@ const MoviesRow = ((props) => {
     setLoading(false);
   }, [filter, page, query]);
 
-  const btnClass = 'rounded-pill px-5 me-1';
   const shouldDisableNext = page === totalPages || totalPages === 0;
   const shouldDisablePrev = page === 1 || totalPages === 0;
 
@@ -53,17 +51,35 @@ const MoviesRow = ((props) => {
   if (movies.length < 1) return <Movies404 />;
 
   return (
-    <Row className="g-1">
-      {movies.map((movie) => <MovieColumn movie={movie} key={movie.id} />)}
+    <div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        {movies.map((movie) => (
+          <MovieCard movie={movie} key={movie.id} />
+        ))}
+      </div>
 
-      <Col xs={12} className="text-center my-5">
-        { totalPages >= 1 && <p className="mx-1 text-white mb-3">{`Page: ${page} of ${totalPages}`}</p> }
-        <Button variant="light" className={btnClass} onClick={decreasePage} disabled={shouldDisablePrev}>Prev</Button>
-        <Button variant="light" className={btnClass} onClick={increasePage} disabled={shouldDisableNext}>Next</Button>
-      </Col>
-    </Row>
+      <div className="text-center my-5">
+        {totalPages >= 1 && (
+          <p className="mx-1 text-slate-100 mb-3">{`Page: ${page} of ${totalPages}`}</p>
+        )}
+        <button
+          className="btn rounded-full px-5 mr-1"
+          onClick={decreasePage}
+          disabled={shouldDisablePrev}
+        >
+          Prev
+        </button>
+        <button
+          className="btn rounded-full px-5 ml-1"
+          onClick={increasePage}
+          disabled={shouldDisableNext}
+        >
+          Next
+        </button>
+      </div>
+    </div>
   );
-});
+};
 
 MoviesRow.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.instanceOf(Object)).isRequired,
@@ -79,11 +95,15 @@ const mapState = (state) => ({
   metaData: state.metaData,
 });
 
-const mapDispatch = (dispatch) => bindActionCreators({
-  addMovies,
-  setTotalPages,
-  increasePage,
-  decreasePage,
-}, dispatch);
+const mapDispatch = (dispatch) =>
+  bindActionCreators(
+    {
+      addMovies,
+      setTotalPages,
+      increasePage,
+      decreasePage,
+    },
+    dispatch
+  );
 
 export default connect(mapState, mapDispatch)(MoviesRow);

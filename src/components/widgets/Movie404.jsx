@@ -1,13 +1,15 @@
-import PropTypes from 'prop-types';
-import Col from 'react-bootstrap/Col';
+import PropTypes from "prop-types";
 
 const Movies404 = ({ text }) => (
-  <Col className="text-center mt-5" data-testid="movie-404">
-    <h1 className="fs-3">
-      <span className="text-danger fw-bold">404</span>
-      <span>{ `${text} | not found` }</span>
+  <div
+    className="h-[calc(100vh-64px)] flex justify-center items-center text-center py-10"
+    data-testid="movie-404"
+  >
+    <h1 className="text-4xl dark:text-slate-50">
+      <span className="text-red-500 font-bold">404</span>
+      <span>{`${text} | not found`}</span>
     </h1>
-  </Col>
+  </div>
 );
 
 Movies404.propTypes = {
@@ -15,7 +17,7 @@ Movies404.propTypes = {
 };
 
 Movies404.defaultProps = {
-  text: '',
+  text: "",
 };
 
 export default Movies404;

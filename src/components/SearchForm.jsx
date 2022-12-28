@@ -1,14 +1,12 @@
-import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import { setFilter, setQuery } from '../redux/actions/metaData';
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { setFilter, setQuery } from "../redux/actions/metaData";
 
 const SearchForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState("");
   const [disabled, setDisabled] = useState(true);
   const minSearchLength = 3;
 
@@ -28,29 +26,28 @@ const SearchForm = () => {
     if (searchInput.length < minSearchLength) return;
 
     dispatch(setQuery(searchInput));
-    dispatch(setFilter('search'));
-    history.push('/');
+    dispatch(setFilter("search"));
+    history.push("/");
   };
 
   return (
-    <Form className="d-flex" onSubmit={handleSubmit} data-testid="search-form">
-      <Form.Control
+    <form className="flex" onSubmit={handleSubmit} data-testid="search-form">
+      <input
         type="search"
+        className="dark:bg-gray-700 dark:text-slate-100 focus:bg-gray-500"
         placeholder="Movie or show title"
-        className="rounded-0 border-0"
         aria-label="Movie or show title"
         value={searchInput}
         onInput={handleQueryInput}
       />
-      <Button
+      <button
         type="submit"
-        variant="success"
         disabled={disabled}
-        className={`rounded-0 no-outline ${disabled ? 'disabled' : ''}`}
+        className="btn-green-600 rounded-none"
       >
         Search
-      </Button>
-    </Form>
+      </button>
+    </form>
   );
 };
 
