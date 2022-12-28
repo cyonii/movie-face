@@ -20,6 +20,10 @@ export default defineConfig({
     ],
     preserveSymlinks: true,
   },
+  build: {
+    sourcemap: true,
+    outDir: "build",
+  },
   test: {
     globals: true,
     environment: "jsdom",
