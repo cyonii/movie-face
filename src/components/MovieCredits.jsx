@@ -24,7 +24,7 @@ export default function MovieCredits({ movieID }) {
     <div>
       <h2 className="text-2xl mb-2 font-bold">Credits</h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2">
         {/* Sort credits by image availability */}
         {credits
           .sort((a, b) => {
