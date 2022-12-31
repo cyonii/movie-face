@@ -119,12 +119,12 @@ const MovieDetail = () => {
 
       {/* Movie reviews */}
       <hr className="my-8 md:my-10 border-slate-900" />
-      <div className="flex h-[400px] gap-4">
-        <div className="basis-1/2 overflow-hidden overflow-y-auto h-full mt-3 md:mt-0 pb-3">
+      <div className="flex flex-col md:flex-row h-[400px] gap-4">
+        <div className="md:basis-1/2 overflow-hidden overflow-y-auto h-full mt-3 md:mt-0 pb-3">
           <MovieReviews movieID={movie.id} />
         </div>
 
-        <div className="basis-1/2 order-first md:order-last text-center">
+        <div className="md:basis-1/2 order-first md:order-last text-center">
           <img
             className="img-fluid"
             src={`https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`}
