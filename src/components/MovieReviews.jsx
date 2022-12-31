@@ -24,7 +24,7 @@ const MovieReviews = (props) => {
       {loading ? (
         <Loading size="1rem" />
       ) : (
-        <ul variant="flush" data-testid="review-list">
+        <ul data-testid="review-list">
           {reviews.length < 1 ? (
             <h2 className="my-auto opacity-25 fw-bold mb-0 lh-1">
               No reviews yet.
